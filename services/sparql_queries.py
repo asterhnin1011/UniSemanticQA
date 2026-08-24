@@ -183,7 +183,6 @@ def students_studying_machine_learning():
 
     return students_studying_course("Machine Learning")
 
-
 # ============================================================
 # ROBOTIC
 #
@@ -194,3 +193,43 @@ def students_studying_machine_learning():
 def students_studying_robotic():
 
     return students_studying_course("Embedded Robotic System")
+
+# ============================================================
+# STUDENT COUNT FOR EACH COURSE
+# ============================================================
+
+def student_count_each_course():
+
+    return PREFIX + """
+
+    SELECT ?courseName (COUNT(DISTINCT ?student) AS ?studentCount)
+    WHERE {
+        ?student unisemantic:enrolledIn ?course .
+        ?course unisemantic:hasName ?courseName .
+    }
+    GROUP BY ?courseName
+    ORDER BY ?courseName
+
+    """
+
+# ============================================================
+# STUDENT COURSES
+# ============================================================
+
+def student_courses(student_name):
+
+    return PREFIX + f"""
+
+    SELECT ?studentName ?courseName
+    WHERE {{
+        ?student unisemantic:hasName ?studentName ;
+                 unisemantic:enrolledIn ?course .
+
+        ?course unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?studentName)) = LCASE("{student_name}"))
+    }}
+
+    ORDER BY ?courseName
+
+    """

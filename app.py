@@ -2,9 +2,11 @@
 # app.py
 # ============================================================
 
+import re
 from flask import Flask, render_template, request, jsonify
 
 from services.question_service import (
+  
     get_all_students,
     get_all_subjects,
     get_all_departments,
@@ -15,7 +17,10 @@ from services.question_service import (
     answer_students_studying_information_theory,
     answer_students_studying_machine_learning,
     answer_students_studying_robotic,
+    answer_student_count_each_course,
+    answer_student_courses,
 )
+
 
 
 app = Flask(__name__)
@@ -59,6 +64,68 @@ def ask():
 
 
     question_lower = question.lower()
+
+    # ========================================================
+# STUDENT COURSES
+# ========================================================
+
+    if (
+        "what courses does" in question_lower
+        and "study" in question_lower
+    ):
+
+        match = re.search(
+            r"what courses does (.+?) study\??$",
+            question_lower
+        )
+
+        if match:
+
+            student_name = match.group(1).strip()
+
+            student_name = " ".join(
+                word.capitalize()
+                for word in student_name.split()
+            )
+
+            courses = answer_student_courses(student_name)
+
+            print("\n========== FLASK: STUDENT COURSES ==========")
+
+            print("Student:", student_name)
+
+            print("Courses returned:", len(courses))
+
+            print("Data:", courses)
+
+            return jsonify({
+                "answer": courses
+            })
+
+    # ========================================================
+    # STUDENT COUNT FOR EACH COURSE
+    # ========================================================
+
+    if (
+        "how many students are each course" in question_lower
+        or "how many students in each course" in question_lower
+        or "number of students in each course" in question_lower
+        or "student count for each course" in question_lower
+        or "student count of each course" in question_lower
+        or "how many students does each course have" in question_lower
+    ):
+
+        courses = answer_student_count_each_course()
+
+        print("\n========== FLASK: STUDENT COUNT EACH COURSE ==========")
+
+        print("Courses returned:", len(courses))
+
+        print("Data:", courses)
+
+        return jsonify({
+            "answer": courses
+        })
 
 
     # ========================================================
@@ -194,6 +261,7 @@ def ask():
             "answer": students
         })
     
+
     # ========================================================
     # List All Students
     # ========================================================

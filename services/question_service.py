@@ -15,9 +15,86 @@ from services.sparql_queries import (
     students_studying_information_theory,
     students_studying_machine_learning,
     students_studying_robotic,
+    student_count_each_course,
+    student_courses,
 )
+# ============================================================
+# STUDENT COURSES
+# ============================================================
 
+def answer_student_courses(student_name):
 
+    query = student_courses(student_name)
+
+    print("\n========== STUDENT COURSES ==========")
+
+    print("Student:")
+    print(student_name)
+
+    print("SPARQL QUERY:")
+    print(query)
+
+    result = execute_query(query)
+
+    print("RAW RESULT:")
+    print(result)
+
+    bindings = result["results"]["bindings"]
+
+    courses = []
+
+    for item in bindings:
+
+        courses.append({
+            "student": item["studentName"]["value"],
+            "course": item["courseName"]["value"]
+        })
+
+    print("Courses found:", len(courses))
+    print("Course data:")
+    print(courses)
+
+    return courses
+
+# ============================================================
+# STUDENT COUNT FOR EACH COURSE
+# ============================================================
+
+def answer_student_count_each_course():
+
+    query = student_count_each_course()
+
+    print("\n========== STUDENT COUNT EACH COURSE ==========")
+
+    print("SPARQL QUERY:")
+    print(query)
+
+    result = execute_query(query)
+
+    print("RAW RESULT:")
+    print(result)
+
+    courses = []
+
+    bindings = result["results"]["bindings"]
+
+    for item in bindings:
+
+        course_name = item["courseName"]["value"]
+        student_count = int(item["studentCount"]["value"])
+
+        courses.append({
+            "course": course_name,
+            "studentCount": student_count
+        })
+
+    print("Courses found:", len(courses))
+
+    print("Course student counts:")
+    print(courses)
+
+    return courses
+    
 # ============================================================
 # Convert SPARQL result to student data
 # ============================================================
