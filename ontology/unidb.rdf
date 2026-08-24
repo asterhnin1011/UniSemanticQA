@@ -1,0 +1,1010 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-19/"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-19/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:unisemantic="http://example.org/unisemantic#">
+    <owl:Ontology rdf:about="http://example.org/unisemantic#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/unisemantic#enrolledIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/unisemantic#enrolledIn"/>
+    
+
+
+    <!-- http://example.org/unisemantic#isFromDept -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/unisemantic#isFromDept"/>
+    
+
+
+    <!-- http://example.org/unisemantic#specificMajor -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/unisemantic#specificMajor"/>
+    
+
+
+    <!-- http://example.org/unisemantic#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/unisemantic#teaches"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/unisemantic#hasCourseCode -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/unisemantic#hasCourseCode"/>
+    
+
+
+    <!-- http://example.org/unisemantic#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/unisemantic#hasDescription"/>
+    
+
+
+    <!-- http://example.org/unisemantic#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/unisemantic#hasEmail"/>
+    
+
+
+    <!-- http://example.org/unisemantic#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/unisemantic#hasName"/>
+    
+
+
+    <!-- http://example.org/unisemantic#hasStudentID -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/unisemantic#hasStudentID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/unisemantic#Courses -->
+
+    <owl:Class rdf:about="http://example.org/unisemantic#Courses"/>
+    
+
+
+    <!-- http://example.org/unisemantic#Departments -->
+
+    <owl:Class rdf:about="http://example.org/unisemantic#Departments"/>
+    
+
+
+    <!-- http://example.org/unisemantic#Lecturers -->
+
+    <owl:Class rdf:about="http://example.org/unisemantic#Lecturers">
+        <rdfs:subClassOf rdf:resource="http://example.org/unisemantic#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/unisemantic#Majors -->
+
+    <owl:Class rdf:about="http://example.org/unisemantic#Majors"/>
+    
+
+
+    <!-- http://example.org/unisemantic#Person -->
+
+    <owl:Class rdf:about="http://example.org/unisemantic#Person"/>
+    
+
+
+    <!-- http://example.org/unisemantic#Students -->
+
+    <owl:Class rdf:about="http://example.org/unisemantic#Students">
+        <rdfs:subClassOf rdf:resource="http://example.org/unisemantic#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/unisemantic#AMiMiKyaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#AMiMiKyaw">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>amimikyaw@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>A Mi Mi Kyaw</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-11</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#AnalysisOfAlgorithms -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#AnalysisOfAlgorithms">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>CS-504</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Advanced Analysis of Algoritms</unisemantic:hasDescription>
+        <unisemantic:hasName>Analysis of Algorithms</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#AungKaungSan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#AungKaungSan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>aungkaungsan@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Aung Kaung San</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-18</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#AungNyeinChan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#AungNyeinChan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>aungnyeinchan@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Aung Nyein Chan</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-28</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#AungZawMoe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#AungZawMoe">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>aungzawmoe@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Aung Zaw Moe</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-23</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#BIS -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#BIS">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Majors"/>
+        <unisemantic:hasName>Business Information Systems</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#BusinessAnalytics -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#BusinessAnalytics">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>ITSM-412</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Business Information Theory</unisemantic:hasDescription>
+        <unisemantic:hasName>Business Analytics</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>ITSM-413</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Information Technology Service Management</unisemantic:hasDescription>
+        <unisemantic:hasName>Business System Infrastructure And Security</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ChanMyaeOo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ChanMyaeOo">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>chanmyaeoo@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Chan Myae Oo</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-20</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ChoChoSan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ChoChoSan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>chochosan@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Cho Cho San</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-4</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ChoThinzarKyaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ChoThinzarKyaw">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>chothinzarkyaw@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Cho Thinzar Kyaw</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-16</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#CloudComputing -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#CloudComputing">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>CS-707</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Complete Cloud Computing Manual</unisemantic:hasDescription>
+        <unisemantic:hasName>Cloud Computing</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DawAyeAyeMaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DawAyeAyeMaw">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FCS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:hasEmail>ayeayemaw@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Daw Aye Aye Maw</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DawMyaThandar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DawMyaThandar">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#EnglishDept"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:hasEmail>myathandar@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Daw Mya Thandar</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DeepLearning -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DeepLearning">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>IS-214</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Advanced Deep Learning</unisemantic:hasDescription>
+        <unisemantic:hasName>Resilient Dataset and Deep Learning</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrAmyTun -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrAmyTun">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FCST"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:hasEmail>amytun@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Amy Tun</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrHsuMyatMo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrHsuMyatMo">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FCS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:hasEmail>hsumyatmo@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Hsu Myat Mo</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrKhaingKhaingWai -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrKhaingKhaingWai">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FIS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:hasEmail>khaingkhaingwai@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Khaing Khaing Wai</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrKyawKyawKhaing -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrKyawKyawKhaing">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FIS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:hasEmail>kyawkyawkhaing@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Kyaw Kyaw Khaing</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrMoeMoeHlaing -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrMoeMoeHlaing">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FCS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:hasEmail>moemoehlaing@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Moe Moe Hlaing</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrTinTinHtar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrTinTinHtar">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FIS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:hasEmail>tintinhtar@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Tin Tin Htar</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrTinZarThaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrTinZarThaw">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FCS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:hasEmail>tinzarthaw@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Tin Zar Thaw</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrWinLeltLeltPhyu -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrWinLeltLeltPhyu">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FCS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:hasEmail>winleltleltphyu@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Win Lelt Lelt Phyu</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#DrYuYuThan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#DrYuYuThan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Lecturers"/>
+        <unisemantic:isFromDept rdf:resource="http://example.org/unisemantic#FIS"/>
+        <unisemantic:teaches rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:hasEmail>yuyuthan@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Dr. Yu Yu Than</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#EmbeddedRobotic -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#EmbeddedRobotic">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>CST-524</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Introduction to Embedded System</unisemantic:hasDescription>
+        <unisemantic:hasName>Embedded Robotic System</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#English -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#English">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>Eng-602</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>English in Business Skills</unisemantic:hasDescription>
+        <unisemantic:hasName>English</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#EnglishDept -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#EnglishDept">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Departments"/>
+        <unisemantic:hasName>Department of English</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#FCS -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#FCS">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Departments"/>
+        <unisemantic:hasName>Faculty of Computer Science</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#FCST -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#FCST">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Departments"/>
+        <unisemantic:hasName>Faculty of Computer Systems and Technologies</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#FIS -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#FIS">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Departments"/>
+        <unisemantic:hasName>Faculty of Information Science</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#HninShweYeeWin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#HninShweYeeWin">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>hninshweyeewin@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Hnin Shwe Yee Win</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-47</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#HninThandarKyaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#HninThandarKyaw">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>hninthandar@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Hnin Thandar Kyaw</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-2</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#HsuMyatWaiWaiKhin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#HsuMyatWaiWaiKhin">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>hsumyat@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Hsu Myat Wai Wai Khin</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-34</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#HtetNandarAung -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#HtetNandarAung">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>htetnandaraung@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Htet Nandar Aung</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-25</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#HtutMyatYee -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#HtutMyatYee">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#SE"/>
+        <unisemantic:hasEmail>htutmyat@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Htut Myat Yee</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-9</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#InformationTheory -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#InformationTheory">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>CM-601</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Elements of Information Theory</unisemantic:hasDescription>
+        <unisemantic:hasName>Advanced Information Theory</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#IngyinMwe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#IngyinMwe">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#SE"/>
+        <unisemantic:hasEmail>htutmyat@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Htut Myat Yee</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-9</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KE -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KE">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Majors"/>
+        <unisemantic:hasName>Knowledge Engineering</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KaungMyatKhaing -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KaungMyatKhaing">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>kaungmyatkhaing@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Kaung Myat Khaing</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-21</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KhinHtetHtetAung -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KhinHtetHtetAung">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>khin@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Khin Htet Htet Aung</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-3</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KhinMyintZuSan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KhinMyintZuSan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#SE"/>
+        <unisemantic:hasEmail>myintzu@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Khin Myint Zu San</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-67</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KhinPaPaThein -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KhinPaPaThein">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>khinpapathein@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Khin Pa Pa Thein</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-35</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KhinThiriSan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KhinThiriSan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>khinthirisan@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Khin Thiri San</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-14</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#KhineKhineHtun -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#KhineKhineHtun">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>khinekhinehtun@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Khine Khine Htun</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-13</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#MachineLearning -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#MachineLearning">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>CS-505</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Unsupervised Machine Learning</unisemantic:hasDescription>
+        <unisemantic:hasName>Machine Learning</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#MoeThetNayChi -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#MoeThetNayChi">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#SE"/>
+        <unisemantic:hasEmail>moethet@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Moe Thet Nay Chi</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-46</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#MyoMyatAung -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#MyoMyatAung">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>myo@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Myo Myat Aung</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-5</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#NangTharapheSwe -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#NangTharapheSwe">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>nang@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Nang Tharaphe Swe</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-8</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#NannEiThuzarLin -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#NannEiThuzarLin">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#SE"/>
+        <unisemantic:hasEmail>nannei@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Nann Ei Thuzar Lin</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-10</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#PhuePyaePyaeSan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#PhuePyaePyaeSan">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>phue@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Phue Pyae Pyae San</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-32</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#SE -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#SE">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Majors"/>
+        <unisemantic:hasName>Software Engineering</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#SawHlaNandar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#SawHlaNandar">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#SE"/>
+        <unisemantic:hasEmail>sawhla@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Saw Hla Nandar</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-48</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#SemanticWeb -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#SemanticWeb">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>CS-504</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Semantic Web Technologies</unisemantic:hasDescription>
+        <unisemantic:hasName>Semantic Web</unisemantic:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#SwanHtetKo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#SwanHtetKo">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>swan@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Swan Htet Ko</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-19</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ThandarPhyo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ThandarPhyo">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#AnalysisOfAlgorithms"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>thandar@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Thandar Phyo</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-6</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ThetKyiHtun -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ThetKyiHtun">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>thet@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Thet Kyi Htun</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-7</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ThihaSitNaing -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ThihaSitNaing">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessAnalytics"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#DeepLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#WebDesign"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#BIS"/>
+        <unisemantic:hasEmail>thihasitnaing@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Thiha Sit Naing</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-17</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#ThiriZaw -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#ThiriZaw">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Students"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#CloudComputing"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#EmbeddedRobotic"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#English"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#InformationTheory"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#MachineLearning"/>
+        <unisemantic:enrolledIn rdf:resource="http://example.org/unisemantic#SemanticWeb"/>
+        <unisemantic:specificMajor rdf:resource="http://example.org/unisemantic#KE"/>
+        <unisemantic:hasEmail>thiri@gmail.com</unisemantic:hasEmail>
+        <unisemantic:hasName>Thiri Zaw</unisemantic:hasName>
+        <unisemantic:hasStudentID>6CS-24</unisemantic:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/unisemantic#WebDesign -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/unisemantic#WebDesign">
+        <rdf:type rdf:resource="http://example.org/unisemantic#Courses"/>
+        <unisemantic:hasCourseCode>IS-123</unisemantic:hasCourseCode>
+        <unisemantic:hasDescription>Database Selection and Data-Centric Analysis</unisemantic:hasDescription>
+        <unisemantic:hasName>Comprehensive Web Application Design</unisemantic:hasName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

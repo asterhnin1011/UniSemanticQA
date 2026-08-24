@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UniSemantic QA</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f7fafc;
+            color: #172b4d;
+        }
+
+        /* =========================
+           Layout
+        ========================= */
+
+        .app {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           Sidebar
+        ========================= */
+
+        .sidebar {
+            width: 260px;
+            background: #ffffff;
+            border-right: 1px solid #e5eaf0;
+            padding: 25px 18px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 10px 30px;
+            font-size: 21px;
+            font-weight: 700;
+            color: #123b5d;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: #0e918d;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .menu-item {
+            text-decoration: none;
+            color: #52637a;
+            padding: 14px 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .menu-item:hover {
+            background: #eefafa;
+            color: #0e918d;
+        }
+
+        .menu-item.active {
+            background: #e2f6f4;
+            color: #078b87;
+        }
+
+        .menu-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-about {
+            position: absolute;
+            bottom: 25px;
+            left: 18px;
+            right: 18px;
+            padding: 18px;
+            border: 1px solid #e1e8ee;
+            border-radius: 13px;
+            background: #ffffff;
+        }
+
+        .sidebar-about-title {
+            color: #078b87;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-about p {
+            color: #68778d;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           Main
+        ========================= */
+
+        .main {
+            margin-left: 260px;
+            width: calc(100% - 260px);
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        .topbar {
+            height: 72px;
+            background: white;
+            border-bottom: 1px solid #e5eaf0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 30px;
+            gap: 12px;
+        }
+
+        .icon-button {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #e1e7ee;
+            background: white;
+            border-radius: 10px;
+            color: #617086;
+            cursor: pointer;
+        }
+
+        .language {
+            border: 1px solid #e1e7ee;
+            background: white;
+            border-radius: 10px;
+            padding: 11px 15px;
+            color: #34455c;
+            cursor: pointer;
+        }
+
+        /* =========================
+           Content
+        ========================= */
+
+        .content {
+            padding: 38px 45px;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        /* =========================
+           Welcome
+        ========================= */
+
+        .welcome {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .welcome h1 {
+            font-size: 31px;
+            margin-bottom: 12px;
+            color: #142f4c;
+        }
+
+        .welcome p {
+            color: #66768b;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .welcome-art {
+            font-size: 85px;
+            padding-right: 50px;
+        }
+
+        /* =========================
+           Question Card
+        ========================= */
+
+        .question-card {
+            background: white;
+            border: 1px solid #e2e8ee;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 18px rgba(26, 55, 80, 0.05);
+            margin-bottom: 22px;
+        }
+
+        .question-title {
+            color: #078b87;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .question-form {
+            display: flex;
+            border: 1px solid #dce5ec;
+            border-radius: 11px;
+            overflow: hidden;
+            height: 54px;
+        }
+
+        .question-form i {
+            display: flex;
+            align-items: center;
+            padding-left: 18px;
+            color: #63758c;
+        }
+
+        #question {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0 15px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        #question::placeholder {
+            color: #9aa7b6;
+        }
+
+        .ask-button {
+            margin: 5px;
+            border: none;
+            background: #0ca9a1;
+            color: white;
+            border-radius: 8px;
+            padding: 0 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .ask-button:hover {
+            background: #078e88;
+        }
+
+        .examples-title {
+            font-size: 13px;
+            color: #607086;
+            margin: 20px 0 10px;
+        }
+
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .example {
+            background: #fafcfd;
+            border: 1px solid #e3e9ef;
+            border-radius: 10px;
+            padding: 13px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #344960;
+            transition: 0.2s;
+        }
+
+        .example:hover {
+            border-color: #0ca9a1;
+            background: #f0fbfa;
+        }
+
+        .example i {
+            margin-right: 8px;
+            color: #078f89;
+        }
+
+        /* =========================
+           Statistics
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid #e1e8ee;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .people {
+            background: #dff6f2;
+            color: #07928c;
+        }
+
+        .departments {
+            background: #e8efff;
+            color: #4978db;
+        }
+
+        .courses {
+            background: #f0eafa;
+            color: #7652bd;
+        }
+
+        .relations {
+            background: #fff5dc;
+            color: #c69732;
+        }
+
+        .stat-number {
+            font-size: 25px;
+            font-weight: 700;
+            color: #183553;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #68788c;
+            margin-top: 4px;
+        }
+
+        /* =========================
+           Bottom panels
+        ========================= */
+
+        .bottom {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 22px;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid #e1e8ee;
+            border-radius: 15px;
+            padding: 22px;
+        }
+
+        .panel-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .panel-title i {
+            color: #07918b;
+        }
+
+        /* Recent questions */
+
+        .recent-question {
+            padding: 12px 14px;
+            border-bottom: 1px solid #edf0f3;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .recent-question:last-child {
+            border-bottom: none;
+        }
+
+        .recent-question span:last-child {
+            color: #8b98a8;
+            font-size: 11px;
+        }
+
+        .history {
+            text-align: center;
+            margin-top: 18px;
+            color: #07918b;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* About */
+
+        .about-text {
+            color: #66778c;
+            line-height: 1.7;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 12px 0;
+            color: #52667d;
+            font-size: 13px;
+        }
+
+        .benefit i {
+            color: #0aa394;
+        }
+
+        /* =========================
+           Answer
+        ========================= */
+
+        #answer {
+            margin-top: 20px;
+            background: #f0fbfa;
+            border: 1px solid #c9ece8;
+            border-radius: 12px;
+            padding: 18px;
+            color: #264b58;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 35px 0 10px;
+            color: #8b98a8;
+            font-size: 12px;
+        }
+
+        /* =========================
+           Responsive
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .sidebar {
+                width: 210px;
+            }
+
+            .main {
+                margin-left: 210px;
+                width: calc(100% - 210px);
+            }
+
+            .examples {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bottom {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .sidebar {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .content {
+                padding: 25px 18px;
+            }
+
+            .welcome-art {
+                display: none;
+            }
+
+            .welcome h1 {
+                font-size: 25px;
+            }
+
+            .examples {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* =========================
+   Answer Table
+========================= */
+
+.answer-container {
+    margin-top: 20px;
+}
+
+.answer-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.answer-title h3 {
+    margin: 0;
+    color: #123b5d;
+    font-size: 17px;
+}
+
+.answer-count {
+    background: #e2f6f4;
+    color: #078b87;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #dce7ed;
+    border-radius: 12px;
+    background: white;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.result-table thead {
+    background: #e8f7f6;
+}
+
+.result-table th {
+    padding: 14px 16px;
+    text-align: left;
+    color: #075f62;
+    font-weight: 700;
+    border-bottom: 1px solid #cfe4e3;
+}
+
+.result-table td {
+    padding: 13px 16px;
+    color: #40566d;
+    border-bottom: 1px solid #edf1f4;
+}
+
+.result-table tbody tr:hover {
+    background: #f5fbfb;
+}
+
+.result-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.result-number {
+    width: 60px;
+    text-align: center !important;
+    color: #7b8a9a !important;
+}
+
+.student-name {
+    font-weight: 600;
+    color: #173b59 !important;
+}
+
+.student-id {
+    color: #078b87 !important;
+    font-weight: 600;
+}
+
+.course-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #eef8ff;
+    color: #3573a8;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   Pagination
+========================================================= */
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #edf1f4;
+    gap: 15px;
+}
+
+.pagination-info {
+    color: #718096;
+    font-size: 12px;
+}
+
+.pagination-info strong {
+    color: #344960;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination-button,
+.pagination-number {
+    height: 34px;
+    min-width: 34px;
+    border: 1px solid #dce5ec;
+    background: white;
+    border-radius: 7px;
+    color: #52677d;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pagination-button {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.pagination-button:hover:not(:disabled),
+.pagination-number:hover {
+    border-color: #0ca9a1;
+    color: #078b87;
+    background: #f0fbfa;
+}
+
+.pagination-number.active {
+    background: #0ca9a1;
+    color: white;
+    border-color: #0ca9a1;
+    font-weight: 600;
+}
+
+.pagination-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .pagination-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagination-info {
+        text-align: center;
+    }
+
+    .pagination-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            UniSemantic QA
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Ask Question
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-diagram-project"></i>
+                Browse Ontology
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-circle-info"></i>
+                About
+            </a>
+
+        </nav>
+
+        <div class="sidebar-about">
+
+            <div class="sidebar-about-title">
+                <i class="fa-solid fa-layer-group"></i>
+                &nbsp; About UniSemantic
+            </div>
+
+            <p>
+                Ontology-based question answering
+                system for university data and information.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <!-- <header class="topbar">
+
+            <button class="icon-button">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <button class="icon-button">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="language">
+                <i class="fa-solid fa-globe"></i>
+                &nbsp; English
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+        </header> -->
+
+
+        <div class="content">
+
+            <!-- Welcome -->
+
+            <section class="welcome">
+
+                <div>
+
+                    <h1>
+                        Welcome to UniSemantic QA 👋
+                    </h1>
+
+                    <p>
+                        Ask questions about university students,
+                        lecturers, departments and more.
+                        <br>
+                        Get precise answers powered by ontology.
+                    </p>
+
+                </div>
+
+                <div class="welcome-art">
+                    🎓📚
+                </div>
+
+            </section>
+
+
+            <!-- Question -->
+
+            <section class="question-card">
+
+                <div class="question-title">
+                    Ask a Question
+                </div>
+
+                <div class="question-form">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="question"
+                        placeholder="Example: who studies semantic web"
+                    >
+
+                    <button
+                        class="ask-button"
+                        onclick="askQuestion()">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+                        &nbsp; Ask
+
+                    </button>
+
+                </div>
+
+<br><br>
+                <!-- <div class="examples-title">
+                    Try these examples:
+                </div>  -->
+
+
+                <!-- <div class="examples">
+
+                    <button
+                        class="example"
+                        onclick="setQuestion('who studies semantic web?')">
+
+                        <i class="fa-solid fa-code"></i>
+                        Who studies semantic web?
+
+                    </button>
+
+
+                    <button
+                        class="example"
+                        onclick="setQuestion('Who is from CS department?')">
+
+                        <i class="fa-solid fa-users"></i>
+                        Who is from CS department?
+
+                    </button>
+
+
+                    <button
+                        class="example"
+                        onclick="setQuestion('Who teaches AI?')">
+
+                        <i class="fa-solid fa-robot"></i>
+                        Who teaches AI?
+
+                    </button>
+
+
+                    <button
+                        class="example"
+                        onclick="setQuestion('List all students')">
+
+                        <i class="fa-solid fa-list"></i>
+                        List all students
+
+                    </button>
+
+                </div>  -->
+
+                <div class="example-wrapper">
+
+                    <!-- Main question button -->
+                    <button
+        type="button"
+        class="example"
+        onclick="setQuestion('who studies semantic web?')">
+
+        <span class="question-text">
+            <i class="fa-solid fa-code"></i>
+            Who studies semantic web?
+        </span>
+
+        <span
+            class="dropdown-arrow"
+            onclick="toggleQuestionDropdown(event)">
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </span>
+
+
+                    <button
+                        class="example"
+                        onclick="setQuestion('Who is from CS department?')">
+
+                        <i class="fa-solid fa-users"></i>
+                        Who is from CS department?
+
+                    </button>
+                
+                    
+
+                    <button
+                        class="example"
+                        onclick="setQuestion('Who teaches AI?')">
+
+                        <i class="fa-solid fa-robot"></i>
+                        Who teaches AI?
+
+                    </button>
+
+                    <button
+                    class="example"
+                    onclick="setQuestion('List all students')">
+
+                    <i class="fa-solid fa-list"></i>
+                    List all students
+
+                </button>
+                
+                    <!-- Dropdown questions -->
+                    <div id="questionDropdown" class="question-dropdown" hidden>
+                
+                        <button
+                            type="button"
+                            onclick="selectQuestion('who studies cloud computing?')">
+                            Who studies cloud computing?
+                        </button>
+                
+                        <button
+                            type="button"
+                            onclick="selectQuestion('who studies information theory?')">
+                            Who studies information theory?
+                        </button>
+                
+                        <button
+                            type="button"
+                            onclick="selectQuestion('who studies artificial intelligence?')">
+                            Who studies artificial intelligence?
+                        </button>
+                
+                        <button
+                            type="button"
+                            onclick="selectQuestion('who studies database systems?')">
+                            Who studies database systems?
+                        </button>
+                
+                    </div>
+                
+                </div>
+
+                
+
+                <!-- Answer -->
+
+                <div id="answer" style="display:none;"></div>
+
+            </section>
+
+
+            <!-- Statistics -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon people">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <div class="stat-number">41</div>
+                        <div class="stat-label">People</div>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon departments">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Departments</div>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon courses">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <div>
+                        <div class="stat-number">11</div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+
+                </div>
+
+
+                <!-- <div class="stat-card">
+
+                    <div class="stat-icon relations">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <div class="stat-number">120+</div>
+                        <div class="stat-label">Relations</div>
+                    </div>
+
+                </div> -->
+
+            </section>
+
+
+            <!-- Bottom -->
+
+            <section class="bottom">
+
+
+                <!-- Recent Questions -->
+
+                <div class="panel">
+
+                    <div class="panel-title">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        Recent Questions
+
+                    </div>
+
+
+                    <div class="recent-question">
+
+                        <span>
+                            who studies semantic web?
+                        </span>
+
+                        <span>
+                            2 min ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="recent-question">
+
+                        <span>
+                            Who is from CS department?
+                        </span>
+
+                        <span>
+                            10 min ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="recent-question">
+
+                        <span>
+                            Who teaches AI?
+                        </span>
+
+                        <span>
+                            1 hour ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="recent-question">
+
+                        <span>
+                            List all students
+                        </span>
+
+                        <span>
+                            2 hours ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="recent-question">
+
+                        <span>
+                            Who is in the Mathematics department?
+                        </span>
+
+                        <span>
+                            3 hours ago
+                        </span>
+
+                    </div>
+
+
+                    <div class="history">
+                        View all history →
+                    </div>
+
+                </div>
+
+
+                <!-- About -->
+
+                <div class="panel">
+
+                    <div class="panel-title">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        About the System
+
+                    </div>
+
+
+                    <p class="about-text">
+
+                        UniSemantic QA uses ontology technology
+                        to understand and answer questions about
+                        university data. It connects people,
+                        departments, courses and roles in a
+                        smart way.
+
+                    </p>
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Ontology-based reasoning
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Accurate and structured answers
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Continuously updated knowledge base
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Fast and user-friendly
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+
+            <footer>
+
+                © 2026 UniSemantic QA.
+                All rights reserved.
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =========================
+     JavaScript
+========================== -->
+
+<script>
+
+    function setQuestion(question) {
+
+        document.getElementById("question").value = question;
+
+        document.getElementById("question").focus();
+
+    }
+    
+    function toggleQuestionDropdown(event) {
+
+event.stopPropagation();
+
+const dropdown = document.getElementById("questionDropdown");
+
+dropdown.hidden = !dropdown.hidden;
+}
+
+
+function selectQuestion(question) {
+
+setQuestion(question);
+
+document.getElementById("questionDropdown").hidden = true;
+}
+
+
+document.addEventListener("click", function(event) {
+
+if (!event.target.closest(".example-wrapper")) {
+
+    document.getElementById("questionDropdown").hidden = true;
+
+}
+
+});
+
+</script>
+
+
+
+<script src="/static/js/script.js"></script>
+
+</body>
+
+</html>

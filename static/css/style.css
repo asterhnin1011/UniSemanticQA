@@ -1,0 +1,518 @@
+/* * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+}
+
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.welcome {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.card button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.item {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background: #f1f3f5;
+    border-radius: 8px;
+}
+
+.item span {
+    margin-left: 10px;
+    font-size: 12px;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+}
+
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.welcome {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.card button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.item {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background: #f1f3f5;
+    border-radius: 8px;
+}
+
+.item span {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   STUDENT RESULT TABLE
+   ========================================================= */
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.result-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    background: #eef7f7;
+    color: #123b5d;
+    border-bottom: 1px solid #dce5ea;
+}
+
+.result-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e8edf1;
+    color: #334155;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   STUDENT NUMBER
+   ========================================================= */
+
+.result-number {
+    width: 60px;
+    text-align: center;
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   STUDENT NAME
+   ========================================================= */
+
+.student-name {
+    color: #123b5d;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   STUDENT ID
+   ========================================================= */
+
+.student-id {
+    color: #078b87;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EMAIL
+   ========================================================= */
+
+.student-email {
+    color: #40566d;
+}
+
+
+/* =========================================================
+   MAJOR
+   ========================================================= */
+
+.student-major {
+    color: #52677d;
+}
+
+
+/* =========================================================
+   EMAIL COLUMN WIDTH
+   ========================================================= */
+
+.result-table th:nth-child(4),
+.result-table td:nth-child(4) {
+    min-width: 220px;
+}
+
+
+/* =========================================================
+   MAJOR COLUMN WIDTH
+   ========================================================= */
+
+.result-table th:nth-child(5),
+.result-table td:nth-child(5) {
+    min-width: 220px;
+}
+
+
+/* =========================================================
+   KEEP TABLE CONTENT ON ONE LINE
+   ========================================================= */
+
+.result-table th,
+.result-table td {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE HOVER
+   ========================================================= */
+
+.result-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================================================
+   ANSWER CONTAINER
+   ========================================================= */
+
+.answer-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   ANSWER TITLE
+   ========================================================= */
+
+.answer-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #eefafa;
+    border-bottom: 1px solid #dceaea;
+}
+
+.answer-title h3 {
+    margin: 0;
+    color: #123b5d;
+}
+
+.answer-count {
+    background: #dff5f3;
+    color: #078b87;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-top: 1px solid #e8edf1;
+    background: white;
+}
+
+.pagination-info {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagination-button,
+.pagination-number {
+    border: 1px solid #d8e1e8;
+    background: white;
+    color: #40566d;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pagination-button:hover,
+.pagination-number:hover {
+    background: #eef7f7;
+}
+
+.pagination-number.active {
+    background: #078b87;
+    color: white;
+    border-color: #078b87;
+}
+
+.pagination-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   NORMAL ANSWER
+   ========================================================= */
+
+.normal-answer {
+    padding: 20px;
+    color: #334155;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading-message {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    color: #078b87;
+    text-align: center;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error-message {
+    background: #fff5f5;
+    color: #b42318;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #f3c7c7;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 0 12px;
+    }
+
+    .answer-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .pagination-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .result-table th,
+    .result-table td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .example-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+/* Main question button */
+.example {
+    border-radius: 8px 0 0 8px;
+}
+
+
+/* Arrow button */
+.dropdown-toggle {
+    height: 100%;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+/* Dropdown container */
+.question-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+    min-width: 320px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+    overflow: hidden;
+}
+
+
+/* VERY IMPORTANT */
+.question-dropdown[hidden] {
+    display: none !important;
+}
+
+
+/* Questions inside dropdown */
+.question-dropdown button {
+    display: block;
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: none;
+    background: white;
+
+    text-align: left;
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.question-dropdown button:hover {
+    background: #f2f2f2;
+}
+}

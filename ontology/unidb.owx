@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/unisemantic#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/unisemantic#">
+    <Prefix name="" IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-19/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="Courses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Departments"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Lecturers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Majors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Students"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="enrolledIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isFromDept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="specificMajor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="teaches"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasCourseCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasStudentID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BIS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BusinessAnalytics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BusinessSystemInfrastructureAndSecurity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CloudComputing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DeepLearning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="English"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="InformationTheory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="KE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MachineLearning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MyoMyatAung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SwanHtetKo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ThandarPhyo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ThiriZaw"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WebDesign"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Lecturers"/>
+        <Class IRI="Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Students"/>
+        <Class IRI="Person"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Majors"/>
+        <NamedIndividual IRI="BIS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="BusinessAnalytics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="BusinessSystemInfrastructureAndSecurity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="DeepLearning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="English"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Majors"/>
+        <NamedIndividual IRI="KE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Majors"/>
+        <NamedIndividual IRI="SE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Students"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Courses"/>
+        <NamedIndividual IRI="WebDesign"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="AnalysisOfAlgorithms"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="CloudComputing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="EmbeddedRobotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="English"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="InformationTheory"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="MachineLearning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="enrolledIn"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="specificMajor"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <NamedIndividual IRI="KE"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <Literal>hninthandar@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <Literal>Hnin Thandar Kyaw</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="HninThandarKyaw"/>
+        <Literal>6CS-2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <Literal>hsumyat@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <Literal>Hsu Myat Wai Wai Khin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="HsuMyatWaiWaiKhin"/>
+        <Literal>6CS-34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <Literal>khin@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <Literal>Khin Htet Htet Aung</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="KhinHtetHtetAung"/>
+        <Literal>6CS-3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <Literal>myo@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <Literal>Myo Myat Aung</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="MyoMyatAung"/>
+        <Literal>6CS-5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <Literal>nang@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <Literal>Nang Tharaphe Swe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="NangTharapheSwe"/>
+        <Literal>6CS-8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <Literal>phue@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <Literal>Phue Pyae Pyae San</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="PhuePyaePyaeSan"/>
+        <Literal>6CS-32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <Literal>swan@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <Literal>Swan Htet Ko</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="SwanHtetKo"/>
+        <Literal>6CS-19</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <Literal>thandar@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <Literal>Thandar Phyo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="ThandarPhyo"/>
+        <Literal>6CS-6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <Literal>thet@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <Literal>Thet Kyi Htun</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="ThetKyiHtun"/>
+        <Literal>6CS-7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasEmail"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <Literal>thiri@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasName"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <Literal>Thiri Zaw</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="hasStudentID"/>
+        <NamedIndividual IRI="ThiriZaw"/>
+        <Literal>6CS-24</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

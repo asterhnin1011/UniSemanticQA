@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/unisemantic#"
+     xml:base="http://example.org/unisemantic"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:uni="http://example.org/unisemantic#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#">
+    <owl:Ontology rdf:about="http://example.org/unisemantic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <untitled-ontology-8:hasCourseCode>CS402</untitled-ontology-8:hasCourseCode>
+        <untitled-ontology-8:hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-8:hasCredits>
+        <untitled-ontology-8:hasDescription>Fundamentals of Artificial Intelligence</untitled-ontology-8:hasDescription>
+        <untitled-ontology-8:hasName>Artificial Intelligence Concepts</untitled-ontology-8:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <untitled-ontology-8:teaches rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <untitled-ontology-8:teaches rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <untitled-ontology-8:worksAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <untitled-ontology-8:hasCourseCode>CS302</untitled-ontology-8:hasCourseCode>
+        <untitled-ontology-8:hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-8:hasCredits>
+        <untitled-ontology-8:hasDescription>Fundamentals of Computer Networking.</untitled-ontology-8:hasDescription>
+        <untitled-ontology-8:hasName>Networking Fundamentals</untitled-ontology-8:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <untitled-ontology-8:hasCourseCode>CS301</untitled-ontology-8:hasCourseCode>
+        <untitled-ontology-8:hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-8:hasCredits>
+        <untitled-ontology-8:hasDescription>Introduction to database concepts and SQL.</untitled-ontology-8:hasDescription>
+        <untitled-ontology-8:hasName>Database Systems</untitled-ontology-8:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <untitled-ontology-8:studiesAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+        <untitled-ontology-8:hasEmail>hlahla@gmail.com</untitled-ontology-8:hasEmail>
+        <untitled-ontology-8:hasName>Hla Hla</untitled-ontology-8:hasName>
+        <untitled-ontology-8:hasStudentID>ST005</untitled-ontology-8:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <untitled-ontology-8:studiesAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+        <untitled-ontology-8:hasEmail>hsuhsu@gmail.com</untitled-ontology-8:hasEmail>
+        <untitled-ontology-8:hasName>Hsu Hsu</untitled-ontology-8:hasName>
+        <untitled-ontology-8:hasStudentID>ST004</untitled-ontology-8:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <untitled-ontology-8:studiesAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+        <untitled-ontology-8:hasEmail>koko@gmail.com</untitled-ontology-8:hasEmail>
+        <untitled-ontology-8:hasName>Ko Ko</untitled-ontology-8:hasName>
+        <untitled-ontology-8:hasStudentID>ST003</untitled-ontology-8:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <untitled-ontology-8:teaches rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <untitled-ontology-8:teaches rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <untitled-ontology-8:worksAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <untitled-ontology-8:studiesAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+        <untitled-ontology-8:hasEmail>mama@gmail.com</untitled-ontology-8:hasEmail>
+        <untitled-ontology-8:hasName>Ma Ma</untitled-ontology-8:hasName>
+        <untitled-ontology-8:hasStudentID>ST002</untitled-ontology-8:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <untitled-ontology-8:enrolledIn rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <untitled-ontology-8:studiesAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+        <untitled-ontology-8:hasEmail>mgmg@gmail.com</untitled-ontology-8:hasEmail>
+        <untitled-ontology-8:hasName>Mg Mg</untitled-ontology-8:hasName>
+        <untitled-ontology-8:hasStudentID>ST001</untitled-ontology-8:hasStudentID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <untitled-ontology-8:hasCourseCode>CS101</untitled-ontology-8:hasCourseCode>
+        <untitled-ontology-8:hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-8:hasCredits>
+        <untitled-ontology-8:hasDescription>Introduction to Programming and Logical Thinking.</untitled-ontology-8:hasDescription>
+        <untitled-ontology-8:hasName>Programming Fundamentals</untitled-ontology-8:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <untitled-ontology-8:hasCourseCode>CS401</untitled-ontology-8:hasCourseCode>
+        <untitled-ontology-8:hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-8:hasCredits>
+        <untitled-ontology-8:hasDescription>Semantic Web Technologies</untitled-ontology-8:hasDescription>
+        <untitled-ontology-8:hasName>Semantic Web</untitled-ontology-8:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <untitled-ontology-8:teaches rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <untitled-ontology-8:worksAt rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

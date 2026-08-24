@@ -1,0 +1,769 @@
+@prefix : <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-19/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix unisemantic: <http://example.org/unisemantic#> .
+@base <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-19/> .
+
+<http://example.org/unisemantic#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/unisemantic#enrolledIn
+unisemantic:enrolledIn rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/unisemantic#isFromDept
+unisemantic:isFromDept rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/unisemantic#specificMajor
+unisemantic:specificMajor rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/unisemantic#teaches
+unisemantic:teaches rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/unisemantic#hasCourseCode
+unisemantic:hasCourseCode rdf:type owl:DatatypeProperty .
+
+
+###  http://example.org/unisemantic#hasDescription
+unisemantic:hasDescription rdf:type owl:DatatypeProperty .
+
+
+###  http://example.org/unisemantic#hasEmail
+unisemantic:hasEmail rdf:type owl:DatatypeProperty .
+
+
+###  http://example.org/unisemantic#hasName
+unisemantic:hasName rdf:type owl:DatatypeProperty .
+
+
+###  http://example.org/unisemantic#hasStudentID
+unisemantic:hasStudentID rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/unisemantic#Courses
+unisemantic:Courses rdf:type owl:Class .
+
+
+###  http://example.org/unisemantic#Departments
+unisemantic:Departments rdf:type owl:Class .
+
+
+###  http://example.org/unisemantic#Lecturers
+unisemantic:Lecturers rdf:type owl:Class ;
+                      rdfs:subClassOf unisemantic:Person .
+
+
+###  http://example.org/unisemantic#Majors
+unisemantic:Majors rdf:type owl:Class .
+
+
+###  http://example.org/unisemantic#Person
+unisemantic:Person rdf:type owl:Class .
+
+
+###  http://example.org/unisemantic#Students
+unisemantic:Students rdf:type owl:Class ;
+                     rdfs:subClassOf unisemantic:Person .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/unisemantic#AMiMiKyaw
+unisemantic:AMiMiKyaw rdf:type owl:NamedIndividual ,
+                               unisemantic:Students ;
+                      unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                             unisemantic:CloudComputing ,
+                                             unisemantic:English ,
+                                             unisemantic:InformationTheory ,
+                                             unisemantic:MachineLearning ,
+                                             unisemantic:SemanticWeb ;
+                      unisemantic:specificMajor unisemantic:KE ;
+                      unisemantic:hasEmail "amimikyaw@gmail.com" ;
+                      unisemantic:hasName "A Mi Mi Kyaw" ;
+                      unisemantic:hasStudentID "6CS-11" .
+
+
+###  http://example.org/unisemantic#AnalysisOfAlgorithms
+unisemantic:AnalysisOfAlgorithms rdf:type owl:NamedIndividual ,
+                                          unisemantic:Courses ;
+                                 unisemantic:hasCourseCode "CS-504" ;
+                                 unisemantic:hasDescription "Advanced Analysis of Algoritms" ;
+                                 unisemantic:hasName "Analysis of Algorithms" .
+
+
+###  http://example.org/unisemantic#AungKaungSan
+unisemantic:AungKaungSan rdf:type owl:NamedIndividual ,
+                                  unisemantic:Students ;
+                         unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                unisemantic:DeepLearning ,
+                                                unisemantic:English ,
+                                                unisemantic:InformationTheory ,
+                                                unisemantic:WebDesign ;
+                         unisemantic:specificMajor unisemantic:BIS ;
+                         unisemantic:hasEmail "aungkaungsan@gmail.com" ;
+                         unisemantic:hasName "Aung Kaung San" ;
+                         unisemantic:hasStudentID "6CS-18" .
+
+
+###  http://example.org/unisemantic#AungNyeinChan
+unisemantic:AungNyeinChan rdf:type owl:NamedIndividual ,
+                                   unisemantic:Students ;
+                          unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                 unisemantic:BusinessAnalytics ,
+                                                 unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                 unisemantic:DeepLearning ,
+                                                 unisemantic:English ,
+                                                 unisemantic:InformationTheory ;
+                          unisemantic:specificMajor unisemantic:BIS ;
+                          unisemantic:hasEmail "aungnyeinchan@gmail.com" ;
+                          unisemantic:hasName "Aung Nyein Chan" ;
+                          unisemantic:hasStudentID "6CS-28" .
+
+
+###  http://example.org/unisemantic#AungZawMoe
+unisemantic:AungZawMoe rdf:type owl:NamedIndividual ,
+                                unisemantic:Students ;
+                       unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                              unisemantic:BusinessAnalytics ,
+                                              unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                              unisemantic:DeepLearning ,
+                                              unisemantic:English ,
+                                              unisemantic:InformationTheory ;
+                       unisemantic:specificMajor unisemantic:BIS ;
+                       unisemantic:hasEmail "aungzawmoe@gmail.com" ;
+                       unisemantic:hasName "Aung Zaw Moe" ;
+                       unisemantic:hasStudentID "6CS-23" .
+
+
+###  http://example.org/unisemantic#BIS
+unisemantic:BIS rdf:type owl:NamedIndividual ,
+                         unisemantic:Majors ;
+                unisemantic:hasName "Business Information Systems" .
+
+
+###  http://example.org/unisemantic#BusinessAnalytics
+unisemantic:BusinessAnalytics rdf:type owl:NamedIndividual ,
+                                       unisemantic:Courses ;
+                              unisemantic:hasCourseCode "ITSM-412" ;
+                              unisemantic:hasDescription "Business Information Theory" ;
+                              unisemantic:hasName "Business Analytics" .
+
+
+###  http://example.org/unisemantic#BusinessSystemInfrastructureAndSecurity
+unisemantic:BusinessSystemInfrastructureAndSecurity rdf:type owl:NamedIndividual ,
+                                                             unisemantic:Courses ;
+                                                    unisemantic:hasCourseCode "ITSM-413" ;
+                                                    unisemantic:hasDescription "Information Technology Service Management" ;
+                                                    unisemantic:hasName "Business System Infrastructure And Security" .
+
+
+###  http://example.org/unisemantic#ChanMyaeOo
+unisemantic:ChanMyaeOo rdf:type owl:NamedIndividual ,
+                                unisemantic:Students ;
+                       unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                              unisemantic:BusinessAnalytics ,
+                                              unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                              unisemantic:DeepLearning ,
+                                              unisemantic:English ,
+                                              unisemantic:InformationTheory ;
+                       unisemantic:specificMajor unisemantic:BIS ;
+                       unisemantic:hasEmail "chanmyaeoo@gmail.com" ;
+                       unisemantic:hasName "Chan Myae Oo" ;
+                       unisemantic:hasStudentID "6CS-20" .
+
+
+###  http://example.org/unisemantic#ChoChoSan
+unisemantic:ChoChoSan rdf:type owl:NamedIndividual ,
+                               unisemantic:Students ;
+                      unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                             unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                             unisemantic:DeepLearning ,
+                                             unisemantic:English ,
+                                             unisemantic:InformationTheory ,
+                                             unisemantic:WebDesign ;
+                      unisemantic:specificMajor unisemantic:BIS ;
+                      unisemantic:hasEmail "chochosan@gmail.com" ;
+                      unisemantic:hasName "Cho Cho San" ;
+                      unisemantic:hasStudentID "6CS-4" .
+
+
+###  http://example.org/unisemantic#ChoThinzarKyaw
+unisemantic:ChoThinzarKyaw rdf:type owl:NamedIndividual ,
+                                    unisemantic:Students ;
+                           unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                  unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                  unisemantic:DeepLearning ,
+                                                  unisemantic:English ,
+                                                  unisemantic:InformationTheory ,
+                                                  unisemantic:WebDesign ;
+                           unisemantic:specificMajor unisemantic:BIS ;
+                           unisemantic:hasEmail "chothinzarkyaw@gmail.com" ;
+                           unisemantic:hasName "Cho Thinzar Kyaw" ;
+                           unisemantic:hasStudentID "6CS-16" .
+
+
+###  http://example.org/unisemantic#CloudComputing
+unisemantic:CloudComputing rdf:type owl:NamedIndividual ,
+                                    unisemantic:Courses ;
+                           unisemantic:hasCourseCode "CS-707" ;
+                           unisemantic:hasDescription "Complete Cloud Computing Manual" ;
+                           unisemantic:hasName "Cloud Computing" .
+
+
+###  http://example.org/unisemantic#DawAyeAyeMaw
+unisemantic:DawAyeAyeMaw rdf:type owl:NamedIndividual ,
+                                  unisemantic:Lecturers ;
+                         unisemantic:isFromDept unisemantic:FCS ;
+                         unisemantic:teaches unisemantic:AnalysisOfAlgorithms ;
+                         unisemantic:hasEmail "ayeayemaw@gmail.com" ;
+                         unisemantic:hasName "Daw Aye Aye Maw" .
+
+
+###  http://example.org/unisemantic#DawMyaThandar
+unisemantic:DawMyaThandar rdf:type owl:NamedIndividual ,
+                                   unisemantic:Lecturers ;
+                          unisemantic:isFromDept unisemantic:EnglishDept ;
+                          unisemantic:teaches unisemantic:English ;
+                          unisemantic:hasEmail "myathandar@gmail.com" ;
+                          unisemantic:hasName "Daw Mya Thandar" .
+
+
+###  http://example.org/unisemantic#DeepLearning
+unisemantic:DeepLearning rdf:type owl:NamedIndividual ,
+                                  unisemantic:Courses ;
+                         unisemantic:hasCourseCode "IS-214" ;
+                         unisemantic:hasDescription "Advanced Deep Learning" ;
+                         unisemantic:hasName "Resilient Dataset and Deep Learning" .
+
+
+###  http://example.org/unisemantic#DrAmyTun
+unisemantic:DrAmyTun rdf:type owl:NamedIndividual ,
+                              unisemantic:Lecturers ;
+                     unisemantic:isFromDept unisemantic:FCST ;
+                     unisemantic:teaches unisemantic:EmbeddedRobotic ;
+                     unisemantic:hasEmail "amytun@gmail.com" ;
+                     unisemantic:hasName "Dr. Amy Tun" .
+
+
+###  http://example.org/unisemantic#DrHsuMyatMo
+unisemantic:DrHsuMyatMo rdf:type owl:NamedIndividual ,
+                                 unisemantic:Lecturers ;
+                        unisemantic:isFromDept unisemantic:FCS ;
+                        unisemantic:teaches unisemantic:DeepLearning ;
+                        unisemantic:hasEmail "hsumyatmo@gmail.com" ;
+                        unisemantic:hasName "Dr. Hsu Myat Mo" .
+
+
+###  http://example.org/unisemantic#DrKhaingKhaingWai
+unisemantic:DrKhaingKhaingWai rdf:type owl:NamedIndividual ,
+                                       unisemantic:Lecturers ;
+                              unisemantic:isFromDept unisemantic:FIS ;
+                              unisemantic:teaches unisemantic:BusinessSystemInfrastructureAndSecurity ;
+                              unisemantic:hasEmail "khaingkhaingwai@gmail.com" ;
+                              unisemantic:hasName "Dr. Khaing Khaing Wai" .
+
+
+###  http://example.org/unisemantic#DrKyawKyawKhaing
+unisemantic:DrKyawKyawKhaing rdf:type owl:NamedIndividual ,
+                                      unisemantic:Lecturers ;
+                             unisemantic:isFromDept unisemantic:FIS ;
+                             unisemantic:teaches unisemantic:CloudComputing ;
+                             unisemantic:hasEmail "kyawkyawkhaing@gmail.com" ;
+                             unisemantic:hasName "Dr. Kyaw Kyaw Khaing" .
+
+
+###  http://example.org/unisemantic#DrMoeMoeHlaing
+unisemantic:DrMoeMoeHlaing rdf:type owl:NamedIndividual ,
+                                    unisemantic:Lecturers ;
+                           unisemantic:isFromDept unisemantic:FCS ;
+                           unisemantic:teaches unisemantic:InformationTheory ;
+                           unisemantic:hasEmail "moemoehlaing@gmail.com" ;
+                           unisemantic:hasName "Dr. Moe Moe Hlaing" .
+
+
+###  http://example.org/unisemantic#DrTinTinHtar
+unisemantic:DrTinTinHtar rdf:type owl:NamedIndividual ,
+                                  unisemantic:Lecturers ;
+                         unisemantic:isFromDept unisemantic:FIS ;
+                         unisemantic:teaches unisemantic:BusinessAnalytics ;
+                         unisemantic:hasEmail "tintinhtar@gmail.com" ;
+                         unisemantic:hasName "Dr. Tin Tin Htar" .
+
+
+###  http://example.org/unisemantic#DrTinZarThaw
+unisemantic:DrTinZarThaw rdf:type owl:NamedIndividual ,
+                                  unisemantic:Lecturers ;
+                         unisemantic:isFromDept unisemantic:FCS ;
+                         unisemantic:teaches unisemantic:SemanticWeb ;
+                         unisemantic:hasEmail "tinzarthaw@gmail.com" ;
+                         unisemantic:hasName "Dr. Tin Zar Thaw" .
+
+
+###  http://example.org/unisemantic#DrWinLeltLeltPhyu
+unisemantic:DrWinLeltLeltPhyu rdf:type owl:NamedIndividual ,
+                                       unisemantic:Lecturers ;
+                              unisemantic:isFromDept unisemantic:FCS ;
+                              unisemantic:teaches unisemantic:MachineLearning ;
+                              unisemantic:hasEmail "winleltleltphyu@gmail.com" ;
+                              unisemantic:hasName "Dr. Win Lelt Lelt Phyu" .
+
+
+###  http://example.org/unisemantic#DrYuYuThan
+unisemantic:DrYuYuThan rdf:type owl:NamedIndividual ,
+                                unisemantic:Lecturers ;
+                       unisemantic:isFromDept unisemantic:FIS ;
+                       unisemantic:teaches unisemantic:WebDesign ;
+                       unisemantic:hasEmail "yuyuthan@gmail.com" ;
+                       unisemantic:hasName "Dr. Yu Yu Than" .
+
+
+###  http://example.org/unisemantic#EmbeddedRobotic
+unisemantic:EmbeddedRobotic rdf:type owl:NamedIndividual ,
+                                     unisemantic:Courses ;
+                            unisemantic:hasCourseCode "CST-524" ;
+                            unisemantic:hasDescription "Introduction to Embedded System" ;
+                            unisemantic:hasName "Embedded Robotic System" .
+
+
+###  http://example.org/unisemantic#English
+unisemantic:English rdf:type owl:NamedIndividual ,
+                             unisemantic:Courses ;
+                    unisemantic:hasCourseCode "Eng-602" ;
+                    unisemantic:hasDescription "English in Business Skills" ;
+                    unisemantic:hasName "English" .
+
+
+###  http://example.org/unisemantic#EnglishDept
+unisemantic:EnglishDept rdf:type owl:NamedIndividual ,
+                                 unisemantic:Departments ;
+                        unisemantic:hasName "Department of English" .
+
+
+###  http://example.org/unisemantic#FCS
+unisemantic:FCS rdf:type owl:NamedIndividual ,
+                         unisemantic:Departments ;
+                unisemantic:hasName "Faculty of Computer Science" .
+
+
+###  http://example.org/unisemantic#FCST
+unisemantic:FCST rdf:type owl:NamedIndividual ,
+                          unisemantic:Departments ;
+                 unisemantic:hasName "Faculty of Computer Systems and Technologies" .
+
+
+###  http://example.org/unisemantic#FIS
+unisemantic:FIS rdf:type owl:NamedIndividual ,
+                         unisemantic:Departments ;
+                unisemantic:hasName "Faculty of Information Science" .
+
+
+###  http://example.org/unisemantic#HninShweYeeWin
+unisemantic:HninShweYeeWin rdf:type owl:NamedIndividual ,
+                                    unisemantic:Students ;
+                           unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                                  unisemantic:EmbeddedRobotic ,
+                                                  unisemantic:English ,
+                                                  unisemantic:InformationTheory ,
+                                                  unisemantic:MachineLearning ,
+                                                  unisemantic:SemanticWeb ;
+                           unisemantic:specificMajor unisemantic:KE ;
+                           unisemantic:hasEmail "hninshweyeewin@gmail.com" ;
+                           unisemantic:hasName "Hnin Shwe Yee Win" ;
+                           unisemantic:hasStudentID "6CS-47" .
+
+
+###  http://example.org/unisemantic#HninThandarKyaw
+unisemantic:HninThandarKyaw rdf:type owl:NamedIndividual ,
+                                     unisemantic:Students ;
+                            unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                   unisemantic:CloudComputing ,
+                                                   unisemantic:English ,
+                                                   unisemantic:InformationTheory ,
+                                                   unisemantic:MachineLearning ,
+                                                   unisemantic:SemanticWeb ;
+                            unisemantic:specificMajor unisemantic:KE ;
+                            unisemantic:hasEmail "hninthandar@gmail.com" ;
+                            unisemantic:hasName "Hnin Thandar Kyaw" ;
+                            unisemantic:hasStudentID "6CS-2" .
+
+
+###  http://example.org/unisemantic#HsuMyatWaiWaiKhin
+unisemantic:HsuMyatWaiWaiKhin rdf:type owl:NamedIndividual ,
+                                       unisemantic:Students ;
+                              unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                                     unisemantic:EmbeddedRobotic ,
+                                                     unisemantic:English ,
+                                                     unisemantic:InformationTheory ,
+                                                     unisemantic:MachineLearning ,
+                                                     unisemantic:SemanticWeb ;
+                              unisemantic:specificMajor unisemantic:KE ;
+                              unisemantic:hasEmail "hsumyat@gmail.com" ;
+                              unisemantic:hasName "Hsu Myat Wai Wai Khin" ;
+                              unisemantic:hasStudentID "6CS-34" .
+
+
+###  http://example.org/unisemantic#HtetNandarAung
+unisemantic:HtetNandarAung rdf:type owl:NamedIndividual ,
+                                    unisemantic:Students ;
+                           unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                  unisemantic:BusinessAnalytics ,
+                                                  unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                  unisemantic:DeepLearning ,
+                                                  unisemantic:English ,
+                                                  unisemantic:InformationTheory ;
+                           unisemantic:specificMajor unisemantic:BIS ;
+                           unisemantic:hasEmail "htetnandaraung@gmail.com" ;
+                           unisemantic:hasName "Htet Nandar Aung" ;
+                           unisemantic:hasStudentID "6CS-25" .
+
+
+###  http://example.org/unisemantic#HtutMyatYee
+unisemantic:HtutMyatYee rdf:type owl:NamedIndividual ,
+                                 unisemantic:Students ;
+                        unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                               unisemantic:DeepLearning ,
+                                               unisemantic:English ,
+                                               unisemantic:InformationTheory ,
+                                               unisemantic:SemanticWeb ,
+                                               unisemantic:WebDesign ;
+                        unisemantic:specificMajor unisemantic:SE ;
+                        unisemantic:hasEmail "htutmyat@gmail.com" ;
+                        unisemantic:hasName "Htut Myat Yee" ;
+                        unisemantic:hasStudentID "6CS-9" .
+
+
+###  http://example.org/unisemantic#InformationTheory
+unisemantic:InformationTheory rdf:type owl:NamedIndividual ,
+                                       unisemantic:Courses ;
+                              unisemantic:hasCourseCode "CM-601" ;
+                              unisemantic:hasDescription "Elements of Information Theory" ;
+                              unisemantic:hasName "Advanced Information Theory" .
+
+
+###  http://example.org/unisemantic#IngyinMwe
+unisemantic:IngyinMwe rdf:type owl:NamedIndividual ,
+                               unisemantic:Students ;
+                      unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                             unisemantic:DeepLearning ,
+                                             unisemantic:English ,
+                                             unisemantic:InformationTheory ,
+                                             unisemantic:SemanticWeb ,
+                                             unisemantic:WebDesign ;
+                      unisemantic:specificMajor unisemantic:SE ;
+                      unisemantic:hasEmail "ingyin@gmail.com" ;
+                      unisemantic:hasName "Ingyin Mwe" ;
+                      unisemantic:hasStudentID "6CS-1" .
+
+
+###  http://example.org/unisemantic#KE
+unisemantic:KE rdf:type owl:NamedIndividual ,
+                        unisemantic:Majors ;
+               unisemantic:hasName "Knowledge Engineering" .
+
+
+###  http://example.org/unisemantic#KaungMyatKhaing
+unisemantic:KaungMyatKhaing rdf:type owl:NamedIndividual ,
+                                     unisemantic:Students ;
+                            unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                   unisemantic:BusinessAnalytics ,
+                                                   unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                   unisemantic:DeepLearning ,
+                                                   unisemantic:English ,
+                                                   unisemantic:InformationTheory ;
+                            unisemantic:specificMajor unisemantic:BIS ;
+                            unisemantic:hasEmail "kaungmyatkhaing@gmail.com" ;
+                            unisemantic:hasName "Kaung Myat Khaing" ;
+                            unisemantic:hasStudentID "6CS-21" .
+
+
+###  http://example.org/unisemantic#KhinHtetHtetAung
+unisemantic:KhinHtetHtetAung rdf:type owl:NamedIndividual ,
+                                      unisemantic:Students ;
+                             unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                    unisemantic:CloudComputing ,
+                                                    unisemantic:English ,
+                                                    unisemantic:InformationTheory ,
+                                                    unisemantic:MachineLearning ,
+                                                    unisemantic:SemanticWeb ;
+                             unisemantic:specificMajor unisemantic:KE ;
+                             unisemantic:hasEmail "khin@gmail.com" ;
+                             unisemantic:hasName "Khin Htet Htet Aung" ;
+                             unisemantic:hasStudentID "6CS-3" .
+
+
+###  http://example.org/unisemantic#KhinMyintZuSan
+unisemantic:KhinMyintZuSan rdf:type owl:NamedIndividual ,
+                                    unisemantic:Students ;
+                           unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                  unisemantic:DeepLearning ,
+                                                  unisemantic:English ,
+                                                  unisemantic:InformationTheory ,
+                                                  unisemantic:SemanticWeb ,
+                                                  unisemantic:WebDesign ;
+                           unisemantic:specificMajor unisemantic:SE ;
+                           unisemantic:hasEmail "myintzu@gmail.com" ;
+                           unisemantic:hasName "Khin Myint Zu San" ;
+                           unisemantic:hasStudentID "6CS-67" .
+
+
+###  http://example.org/unisemantic#KhinPaPaThein
+unisemantic:KhinPaPaThein rdf:type owl:NamedIndividual ,
+                                   unisemantic:Students ;
+                          unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                                 unisemantic:EmbeddedRobotic ,
+                                                 unisemantic:English ,
+                                                 unisemantic:InformationTheory ,
+                                                 unisemantic:MachineLearning ,
+                                                 unisemantic:SemanticWeb ;
+                          unisemantic:specificMajor unisemantic:KE ;
+                          unisemantic:hasEmail "khinpapathein@gmail.com" ;
+                          unisemantic:hasName "Khin Pa Pa Thein" ;
+                          unisemantic:hasStudentID "6CS-35" .
+
+
+###  http://example.org/unisemantic#KhinThiriSan
+unisemantic:KhinThiriSan rdf:type owl:NamedIndividual ,
+                                  unisemantic:Students ;
+                         unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                unisemantic:DeepLearning ,
+                                                unisemantic:English ,
+                                                unisemantic:InformationTheory ,
+                                                unisemantic:WebDesign ;
+                         unisemantic:specificMajor unisemantic:BIS ;
+                         unisemantic:hasEmail "khinthirisan@gmail.com" ;
+                         unisemantic:hasName "Khin Thiri San" ;
+                         unisemantic:hasStudentID "6CS-14" .
+
+
+###  http://example.org/unisemantic#KhineKhineHtun
+unisemantic:KhineKhineHtun rdf:type owl:NamedIndividual ,
+                                    unisemantic:Students ;
+                           unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                  unisemantic:CloudComputing ,
+                                                  unisemantic:English ,
+                                                  unisemantic:InformationTheory ,
+                                                  unisemantic:MachineLearning ,
+                                                  unisemantic:SemanticWeb ;
+                           unisemantic:specificMajor unisemantic:KE ;
+                           unisemantic:hasEmail "khinekhinehtun@gmail.com" ;
+                           unisemantic:hasName "Khine Khine Htun" ;
+                           unisemantic:hasStudentID "6CS-13" .
+
+
+###  http://example.org/unisemantic#MachineLearning
+unisemantic:MachineLearning rdf:type owl:NamedIndividual ,
+                                     unisemantic:Courses ;
+                            unisemantic:hasCourseCode "CS-505" ;
+                            unisemantic:hasDescription "Unsupervised Machine Learning" ;
+                            unisemantic:hasName "Machine Learning" .
+
+
+###  http://example.org/unisemantic#MoeThetNayChi
+unisemantic:MoeThetNayChi rdf:type owl:NamedIndividual ,
+                                   unisemantic:Students ;
+                          unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                 unisemantic:DeepLearning ,
+                                                 unisemantic:English ,
+                                                 unisemantic:InformationTheory ,
+                                                 unisemantic:SemanticWeb ,
+                                                 unisemantic:WebDesign ;
+                          unisemantic:specificMajor unisemantic:SE ;
+                          unisemantic:hasEmail "moethet@gmail.com" ;
+                          unisemantic:hasName "Moe Thet Nay Chi" ;
+                          unisemantic:hasStudentID "6CS-46" .
+
+
+###  http://example.org/unisemantic#MyoMyatAung
+unisemantic:MyoMyatAung rdf:type owl:NamedIndividual ,
+                                 unisemantic:Students ;
+                        unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                               unisemantic:CloudComputing ,
+                                               unisemantic:English ,
+                                               unisemantic:InformationTheory ,
+                                               unisemantic:MachineLearning ,
+                                               unisemantic:SemanticWeb ;
+                        unisemantic:specificMajor unisemantic:KE ;
+                        unisemantic:hasEmail "myo@gmail.com" ;
+                        unisemantic:hasName "Myo Myat Aung" ;
+                        unisemantic:hasStudentID "6CS-5" .
+
+
+###  http://example.org/unisemantic#NangTharapheSwe
+unisemantic:NangTharapheSwe rdf:type owl:NamedIndividual ,
+                                     unisemantic:Students ;
+                            unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                                   unisemantic:CloudComputing ,
+                                                   unisemantic:English ,
+                                                   unisemantic:InformationTheory ,
+                                                   unisemantic:MachineLearning ,
+                                                   unisemantic:SemanticWeb ;
+                            unisemantic:specificMajor unisemantic:KE ;
+                            unisemantic:hasEmail "nang@gmail.com" ;
+                            unisemantic:hasName "Nang Tharaphe Swe" ;
+                            unisemantic:hasStudentID "6CS-8" .
+
+
+###  http://example.org/unisemantic#NannEiThuzarLin
+unisemantic:NannEiThuzarLin rdf:type owl:NamedIndividual ,
+                                     unisemantic:Students ;
+                            unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                   unisemantic:DeepLearning ,
+                                                   unisemantic:English ,
+                                                   unisemantic:InformationTheory ,
+                                                   unisemantic:SemanticWeb ,
+                                                   unisemantic:WebDesign ;
+                            unisemantic:specificMajor unisemantic:SE ;
+                            unisemantic:hasEmail "nannei@gmail.com" ;
+                            unisemantic:hasName "Nann Ei Thuzar Lin" ;
+                            unisemantic:hasStudentID "6CS-10" .
+
+
+###  http://example.org/unisemantic#PhuePyaePyaeSan
+unisemantic:PhuePyaePyaeSan rdf:type owl:NamedIndividual ,
+                                     unisemantic:Students ;
+                            unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                                   unisemantic:EmbeddedRobotic ,
+                                                   unisemantic:English ,
+                                                   unisemantic:InformationTheory ,
+                                                   unisemantic:MachineLearning ,
+                                                   unisemantic:SemanticWeb ;
+                            unisemantic:specificMajor unisemantic:KE ;
+                            unisemantic:hasEmail "phue@gmail.com" ;
+                            unisemantic:hasName "Phue Pyae Pyae San" ;
+                            unisemantic:hasStudentID "6CS-32" .
+
+
+###  http://example.org/unisemantic#SE
+unisemantic:SE rdf:type owl:NamedIndividual ,
+                        unisemantic:Majors ;
+               unisemantic:hasName "Software Engineering" .
+
+
+###  http://example.org/unisemantic#SawHlaNandar
+unisemantic:SawHlaNandar rdf:type owl:NamedIndividual ,
+                                  unisemantic:Students ;
+                         unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                unisemantic:DeepLearning ,
+                                                unisemantic:English ,
+                                                unisemantic:InformationTheory ,
+                                                unisemantic:SemanticWeb ,
+                                                unisemantic:WebDesign ;
+                         unisemantic:specificMajor unisemantic:SE ;
+                         unisemantic:hasEmail "sawhla@gmail.com" ;
+                         unisemantic:hasName "Saw Hla Nandar" ;
+                         unisemantic:hasStudentID "6CS-48" .
+
+
+###  http://example.org/unisemantic#SemanticWeb
+unisemantic:SemanticWeb rdf:type owl:NamedIndividual ,
+                                 unisemantic:Courses ;
+                        unisemantic:hasCourseCode "CS-504" ;
+                        unisemantic:hasDescription "Semantic Web Technologies" ;
+                        unisemantic:hasName "Semantic Web" .
+
+
+###  http://example.org/unisemantic#SwanHtetKo
+unisemantic:SwanHtetKo rdf:type owl:NamedIndividual ,
+                                unisemantic:Students ;
+                       unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                              unisemantic:EmbeddedRobotic ,
+                                              unisemantic:English ,
+                                              unisemantic:InformationTheory ,
+                                              unisemantic:MachineLearning ,
+                                              unisemantic:SemanticWeb ;
+                       unisemantic:specificMajor unisemantic:KE ;
+                       unisemantic:hasEmail "swan@gmail.com" ;
+                       unisemantic:hasName "Swan Htet Ko" ;
+                       unisemantic:hasStudentID "6CS-19" .
+
+
+###  http://example.org/unisemantic#ThandarPhyo
+unisemantic:ThandarPhyo rdf:type owl:NamedIndividual ,
+                                 unisemantic:Students ;
+                        unisemantic:enrolledIn unisemantic:AnalysisOfAlgorithms ,
+                                               unisemantic:CloudComputing ,
+                                               unisemantic:English ,
+                                               unisemantic:InformationTheory ,
+                                               unisemantic:MachineLearning ,
+                                               unisemantic:SemanticWeb ;
+                        unisemantic:specificMajor unisemantic:KE ;
+                        unisemantic:hasEmail "thandar@gmail.com" ;
+                        unisemantic:hasName "Thandar Phyo" ;
+                        unisemantic:hasStudentID "6CS-6" .
+
+
+###  http://example.org/unisemantic#ThetKyiHtun
+unisemantic:ThetKyiHtun rdf:type owl:NamedIndividual ,
+                                 unisemantic:Students ;
+                        unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                               unisemantic:EmbeddedRobotic ,
+                                               unisemantic:English ,
+                                               unisemantic:InformationTheory ,
+                                               unisemantic:MachineLearning ,
+                                               unisemantic:SemanticWeb ;
+                        unisemantic:specificMajor unisemantic:KE ;
+                        unisemantic:hasEmail "thet@gmail.com" ;
+                        unisemantic:hasName "Thet Kyi Htun" ;
+                        unisemantic:hasStudentID "6CS-7" .
+
+
+###  http://example.org/unisemantic#ThihaSitNaing
+unisemantic:ThihaSitNaing rdf:type owl:NamedIndividual ,
+                                   unisemantic:Students ;
+                          unisemantic:enrolledIn unisemantic:BusinessAnalytics ,
+                                                 unisemantic:BusinessSystemInfrastructureAndSecurity ,
+                                                 unisemantic:DeepLearning ,
+                                                 unisemantic:English ,
+                                                 unisemantic:InformationTheory ,
+                                                 unisemantic:WebDesign ;
+                          unisemantic:specificMajor unisemantic:BIS ;
+                          unisemantic:hasEmail "thihasitnaing@gmail.com" ;
+                          unisemantic:hasName "Thiha Sit Naing" ;
+                          unisemantic:hasStudentID "6CS-17" .
+
+
+###  http://example.org/unisemantic#ThiriZaw
+unisemantic:ThiriZaw rdf:type owl:NamedIndividual ,
+                              unisemantic:Students ;
+                     unisemantic:enrolledIn unisemantic:CloudComputing ,
+                                            unisemantic:EmbeddedRobotic ,
+                                            unisemantic:English ,
+                                            unisemantic:InformationTheory ,
+                                            unisemantic:MachineLearning ,
+                                            unisemantic:SemanticWeb ;
+                     unisemantic:specificMajor unisemantic:KE ;
+                     unisemantic:hasEmail "thiri@gmail.com" ;
+                     unisemantic:hasName "Thiri Zaw" ;
+                     unisemantic:hasStudentID "6CS-24" .
+
+
+###  http://example.org/unisemantic#WebDesign
+unisemantic:WebDesign rdf:type owl:NamedIndividual ,
+                               unisemantic:Courses ;
+                      unisemantic:hasCourseCode "IS-123" ;
+                      unisemantic:hasDescription "Database Selection and Data-Centric Analysis" ;
+                      unisemantic:hasName "Comprehensive Web Application Design" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

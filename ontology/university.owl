@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/unisemantic"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/unisemantic">
+    <Prefix name="" IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <Literal>CS402</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <Literal>Fundamentals of Artificial Intelligence</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence"/>
+        <Literal>Artificial Intelligence Concepts</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <Literal>CS302</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <Literal>Fundamentals of Computer Networking.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks"/>
+        <Literal>Networking Fundamentals</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <Literal>CS301</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <Literal>Introduction to database concepts and SQL.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database"/>
+        <Literal>Database Systems</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <Literal>hlahla@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <Literal>Hla Hla</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla"/>
+        <Literal>ST005</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <Literal>hsuhsu@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <Literal>Hsu Hsu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu"/>
+        <Literal>ST004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <Literal>koko@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <Literal>Ko Ko</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo"/>
+        <Literal>ST003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <Literal>mama@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <Literal>Ma Ma</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa"/>
+        <Literal>ST002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <Literal>mgmg@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <Literal>Mg Mg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg"/>
+        <Literal>ST001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <Literal>CS101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <Literal>Introduction to Programming and Logical Thinking.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming"/>
+        <Literal>Programming Fundamentals</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <Literal>CS401</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <Literal>Semantic Web Technologies</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb"/>
+        <Literal>Semantic Web</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <Class IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

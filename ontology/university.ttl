@@ -1,0 +1,249 @@
+@prefix : <http://example.org/unisemantic#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uni: <http://example.org/unisemantic#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/unisemantic> .
+
+<http://example.org/unisemantic> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#offersCourse> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University> ;
+                                                                                     rdfs:range <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                                  rdfs:range <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer> ;
+                                                                                rdfs:range <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer> ;
+                                                                                rdfs:range <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person> ;
+                                                                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person> ;
+                                                                                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                                     rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Person> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode> "CS402" ;
+                                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits> 3 ;
+                                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription> "Fundamentals of Artificial Intelligence" ;
+                                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Artificial Intelligence Concepts" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#AungAung> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer> ;
+                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database> ,
+                                                                                                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming> ;
+                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                         <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode> "CS302" ;
+                                                                                         <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits> 3 ;
+                                                                                         <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription> "Fundamentals of Computer Networking." ;
+                                                                                         <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Networking Fundamentals" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode> "CS301" ;
+                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits> 3 ;
+                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription> "Introduction to database concepts and SQL." ;
+                                                                                 <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Database Systems" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HlaHla> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence> ,
+                                                                                                                                                                  <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks> ,
+                                                                                                                                                                  <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail> "hlahla@gmail.com" ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Hla Hla" ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID> "ST005" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#HsuHsu> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence> ,
+                                                                                                                                                                  <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database> ,
+                                                                                                                                                                  <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail> "hsuhsu@gmail.com" ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Hsu Hsu" ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID> "ST004" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#KoKo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence> ,
+                                                                                                                                                                <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks> ,
+                                                                                                                                                                <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail> "koko@gmail.com" ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Ko Ko" ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID> "ST003" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#LaeLae> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence> ,
+                                                                                                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MaMa> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ArtificialIntelligence> ,
+                                                                                                                                                                <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming> ,
+                                                                                                                                                                <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail> "mama@gmail.com" ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Ma Ma" ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID> "ST002" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#MgMg> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Student> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#enrolledIn> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Database> ,
+                                                                                                                                                                <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming> ,
+                                                                                                                                                                <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#studiesAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasEmail> "mgmg@gmail.com" ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Mg Mg" ;
+                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasStudentID> "ST001" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Programming> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode> "CS101" ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits> 3 ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription> "Introduction to Programming and Logical Thinking." ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Programming Fundamentals" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#SemanticWeb> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Course> ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCourseCode> "CS401" ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasCredits> 3 ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasDescription> "Semantic Web Technologies" ;
+                                                                                    <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#hasName> "Semantic Web" .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#TunTun> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#Lecturer> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#teaches> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#ComputerNetworks> ;
+                                                                               <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#worksAt> <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY
+<http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#UCSY> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/dell/ontologies/2026/7/untitled-ontology-8#University> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
