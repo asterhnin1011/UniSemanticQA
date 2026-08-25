@@ -77,26 +77,32 @@ def all_departments():
     """
 
 # ============================================================
-# ALL LECTURERS
+# ALL LECTURERS WITH COURSE
 # ============================================================
 
 def all_lecturers():
 
     return PREFIX + """
+
     SELECT DISTINCT
         ?lecturerName
         ?email
+        ?courseName
 
     WHERE {
 
         ?lecturer rdf:type unisemantic:Lecturers ;
                   unisemantic:hasName ?lecturerName ;
-                  unisemantic:hasEmail ?email .
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course unisemantic:hasName ?courseName .
+
     }
 
-    ORDER BY ?lecturerName
-    """
+    ORDER BY ?lecturerName ?courseName
 
+    """
 
 # ============================================================
 # HELPER FUNCTION
@@ -232,4 +238,287 @@ def student_courses(student_name):
 
     ORDER BY ?courseName
 
+    """
+
+# ============================================================
+# STUDENTS MAJORING IN A SPECIFIC MAJOR
+# ============================================================
+
+def students_majoring_in(major_name):
+
+    return PREFIX + f"""
+
+    SELECT ?studentID ?studentName ?email ?majorName
+    WHERE {{
+        ?student unisemantic:hasName ?studentName ;
+                 unisemantic:hasStudentID ?studentID ;
+                 unisemantic:hasEmail ?email ;
+                 unisemantic:specificMajor ?major .
+
+        ?major unisemantic:hasName ?majorName .
+
+        FILTER(LCASE(STR(?majorName)) = LCASE("{major_name}"))
+    }}
+
+    ORDER BY ?studentName
+
+    """
+# ========================================================
+# Lecturers teach English
+# ========================================================
+
+def lecturers_teaching_english():
+    return PREFIX + """
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+    WHERE {
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "english")
+    }
+    ORDER BY ?lecturerName
+    """
+# ========================================================
+# Lecturers teach Advanced Information Theory
+# ========================================================
+
+def lecturers_teaching_advanced_information_theory():
+    return PREFIX + """
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+    WHERE {
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "advanced information theory")
+    }
+    ORDER BY ?lecturerName
+    """
+# ========================================================
+# Lecturers teach Business Analytics
+# ========================================================
+
+def lecturers_teaching_business_analytics():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+
+    WHERE {
+
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "business analytics")
+    }
+
+    ORDER BY ?lecturerName
+
+    """
+# ========================================================
+# Lecturers teach Machine Learning
+# ========================================================
+
+def lecturers_teaching_machine_learning():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+
+    WHERE {
+
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "machine learning")
+    }
+
+    ORDER BY ?lecturerName
+
+    """
+# ========================================================
+# Lecturers teach Analysis of Algorithms
+# ========================================================
+
+def lecturers_teaching_analysis_of_algorithms():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+
+    WHERE {
+
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "analysis of algorithms")
+
+    }
+
+    ORDER BY ?lecturerName
+
+    """
+# ========================================================
+# Lecturers teach Cloud Computing
+# ========================================================
+
+def lecturers_teaching_cloud_computing():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+    WHERE {
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "cloud computing")
+    }
+    ORDER BY ?lecturerName
+    """
+# ========================================================
+# Lecturers teach Semantic Web
+# ========================================================
+
+def lecturers_teaching_semantic_web():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+    WHERE {
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "semantic web")
+    }
+    ORDER BY ?lecturerName
+    """
+# ========================================================
+# Lecturers teach Embedded Robotic System
+# ========================================================
+
+def lecturers_teaching_embedded_robotic_system():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+    WHERE {
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(LCASE(STR(?courseName)) = "embedded robotic system")
+    }
+    ORDER BY ?lecturerName
+    """
+# ========================================================
+# Lecturers teach Deep Learning
+# ========================================================
+
+def lecturers_teaching_deep_learning():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+
+    WHERE {
+
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(
+            LCASE(STR(?courseName))
+            = "resilient dataset and deep learning"
+        )
+    }
+
+    ORDER BY ?lecturerName
+
+    """
+# ========================================================
+# Lecturers teach Comprehensive Web Design
+# ========================================================
+
+def lecturers_teaching_comprehensive_web_design():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+
+    WHERE {
+
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(
+            LCASE(STR(?courseName))
+            = "comprehensive web application design"
+        )
+    }
+
+    ORDER BY ?lecturerName
+
+    """
+# ========================================================
+# Lecturers teach Business System Infrastructure and Security
+# ========================================================
+
+def lecturers_teaching_business_system_infrastructure_and_security():
+    return PREFIX + """
+
+    SELECT DISTINCT ?lecturerName ?courseName ?email
+    WHERE {
+        ?lecturer rdf:type unisemantic:Lecturers ;
+                  unisemantic:hasName ?lecturerName ;
+                  unisemantic:hasEmail ?email ;
+                  unisemantic:teaches ?course .
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName .
+
+        FILTER(
+            LCASE(STR(?courseName))
+            = "business system infrastructure and security"
+        )
+    }
+    ORDER BY ?lecturerName
     """

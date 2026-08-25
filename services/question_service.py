@@ -8,7 +8,6 @@ from services.sparql_queries import (
     all_students,
     all_subjects,
     all_departments,
-    all_lecturers,
     students_studying_semantic_web,
     students_studying_cloud_computing,
     students_studying_english,
@@ -17,7 +16,267 @@ from services.sparql_queries import (
     students_studying_robotic,
     student_count_each_course,
     student_courses,
+    students_majoring_in,
+    all_lecturers,
+    lecturers_teaching_english,
+    lecturers_teaching_advanced_information_theory,
+    lecturers_teaching_analysis_of_algorithms,
+    lecturers_teaching_business_analytics,
+    lecturers_teaching_machine_learning,
+    lecturers_teaching_cloud_computing,
+    lecturers_teaching_semantic_web,
+    lecturers_teaching_embedded_robotic_system,
+    lecturers_teaching_deep_learning,
+    lecturers_teaching_comprehensive_web_design,
+    lecturers_teaching_business_system_infrastructure_and_security,
 )
+# ========================================================
+# Lecturers teaching Cloud Computing
+# ========================================================
+
+def get_lecturers_teaching_cloud_computing():
+
+    query = lecturers_teaching_cloud_computing()
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers
+# ========================================================
+# Lecturers teaching Semantic Web
+# ========================================================
+
+def get_lecturers_teaching_semantic_web():
+
+    query = lecturers_teaching_semantic_web()
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers
+# ========================================================
+# Lecturers teaching Embedded Robotic System
+# ========================================================
+
+def get_lecturers_teaching_embedded_robotic_system():
+
+    query = lecturers_teaching_embedded_robotic_system()
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers
+# ========================================================
+# Lecturers teaching Deep Learning
+# ========================================================
+
+def get_lecturers_teaching_deep_learning():
+
+    query = lecturers_teaching_deep_learning()
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers
+# ========================================================
+# Lecturers teaching Comprehensive Web Design
+# ========================================================
+
+def get_lecturers_teaching_comprehensive_web_design():
+
+    query = lecturers_teaching_comprehensive_web_design()
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers
+# ========================================================
+# Lecturers teaching Business System Infrastructure and Security
+# ========================================================
+
+def get_lecturers_teaching_business_system_infrastructure_and_security():
+
+    query = lecturers_teaching_business_system_infrastructure_and_security()
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers
+
+# ========================================================
+# Lecturers teaching English
+# ========================================================
+
+def get_lecturers_teaching_english():
+
+    query = lecturers_teaching_english()
+
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers  
+# ========================================================
+# Lecturers teaching Machine Learning
+# ========================================================
+
+def get_lecturers_teaching_machine_learning():
+
+    query = lecturers_teaching_machine_learning()
+
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+
+        lecturers.append({
+
+            "lecturerName": binding["lecturerName"]["value"],
+
+            "courseName": binding["courseName"]["value"],
+
+            "email": binding["email"]["value"]
+
+        })
+
+    return lecturers
+# ========================================================
+# Lecturers teaching Advanced Information Theory
+# ========================================================
+
+def get_lecturers_teaching_advanced_information_theory():
+
+    query = lecturers_teaching_advanced_information_theory()
+
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+
+        lecturers.append({
+            "lecturerName": binding["lecturerName"]["value"],
+            "courseName": binding["courseName"]["value"],
+            "email": binding["email"]["value"]
+        })
+
+    return lecturers 
+# ========================================================
+# Lecturers teaching Business Analytics
+# ========================================================
+
+def get_lecturers_teaching_business_analytics():
+
+    query = lecturers_teaching_business_analytics()
+
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+
+        lecturers.append({
+
+            "lecturerName": binding["lecturerName"]["value"],
+
+            "courseName": binding["courseName"]["value"],
+
+            "email": binding["email"]["value"]
+
+        })
+
+    return lecturers
+
+# ============================================================
+# STUDENTS MAJORING IN A SPECIFIC MAJOR
+# ============================================================
+
+def answer_students_majoring_in(major_name):
+
+    query = students_majoring_in(major_name)
+
+    print("\n========== STUDENTS MAJORING IN ==========")
+
+    print("Major:", major_name)
+
+    print("SPARQL QUERY:")
+    print(query)
+
+    result = execute_query(query)
+
+    print("RAW RESULT:")
+    print(result)
+
+    bindings = result["results"]["bindings"]
+
+    students = []
+
+    for item in bindings:
+
+        students.append({
+            "id": item["studentID"]["value"],
+            "name": item["studentName"]["value"],
+            "email": item["email"]["value"],
+            "major": item["majorName"]["value"]
+        })
+
+    print("Students found:", len(students))
+    print("Student data:")
+    print(students)
+
+    return students
+
 # ============================================================
 # STUDENT COURSES
 # ============================================================
@@ -264,14 +523,15 @@ def get_all_departments():
     return departments
 
 # ============================================================
-# ALL LECTURERS
+# ALL LECTURERS WITH COURSE
 # ============================================================
 
 def get_all_lecturers():
 
     query = all_lecturers()
 
-    print("\n========== ALL LECTURERS ==========")
+    print("\n========== ALL LECTURERS WITH COURSE ==========")
+
     print("SPARQL QUERY:")
     print(query)
 
@@ -291,6 +551,7 @@ def get_all_lecturers():
     for item in bindings:
 
         lecturer = {
+
             "lecturerName": item.get(
                 "lecturerName",
                 {}
@@ -305,16 +566,26 @@ def get_all_lecturers():
             ).get(
                 "value",
                 "-"
+            ),
+
+            "courseName": item.get(
+                "courseName",
+                {}
+            ).get(
+                "value",
+                "-"
             )
         }
 
         lecturers.append(lecturer)
 
-    print("Lecturers found:", len(lecturers))
+    print("Lecturer-course records found:", len(lecturers))
+
     print("Lecturer data:")
     print(lecturers)
 
     return lecturers
+
 
 # ============================================================
 # ALL STUDENTS
@@ -496,3 +767,28 @@ def answer_students_studying_robotic():
     print(students)
 
     return students
+# ========================================================
+# Lecturers teaching Analysis of Algorithms
+# ========================================================
+
+def get_lecturers_teaching_analysis_of_algorithms():
+
+    query = lecturers_teaching_analysis_of_algorithms()
+
+    data = execute_query(query)
+
+    lecturers = []
+
+    for binding in data["results"]["bindings"]:
+
+        lecturers.append({
+
+            "lecturerName": binding["lecturerName"]["value"],
+
+            "courseName": binding["courseName"]["value"],
+
+            "email": binding["email"]["value"]
+
+        })
+
+    return lecturers

@@ -10,7 +10,6 @@ from services.question_service import (
     get_all_students,
     get_all_subjects,
     get_all_departments,
-    get_all_lecturers,
     answer_students_studying_semantic_web,
     answer_students_studying_cloud_computing,
     answer_students_studying_english,
@@ -19,9 +18,20 @@ from services.question_service import (
     answer_students_studying_robotic,
     answer_student_count_each_course,
     answer_student_courses,
+    answer_students_majoring_in,
+    get_all_lecturers,
+    get_lecturers_teaching_english,
+    get_lecturers_teaching_advanced_information_theory,
+    get_lecturers_teaching_analysis_of_algorithms,
+    get_lecturers_teaching_business_analytics,
+    get_lecturers_teaching_machine_learning,
+    get_lecturers_teaching_cloud_computing,
+    get_lecturers_teaching_semantic_web,
+    get_lecturers_teaching_embedded_robotic_system,
+    get_lecturers_teaching_deep_learning,
+    get_lecturers_teaching_comprehensive_web_design,
+    get_lecturers_teaching_business_system_infrastructure_and_security,
 )
-
-
 
 app = Flask(__name__)
 
@@ -64,7 +74,273 @@ def ask():
 
 
     question_lower = question.lower()
+# ========================================================
+# Who teaches Cloud Computing?
+# ========================================================
 
+    if (
+    "who teaches cloud computing" in question_lower
+    or "who teach cloud computing" in question_lower
+    or "lecturers teaching cloud computing" in question_lower
+    or "lecturers who teach cloud computing" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_cloud_computing()
+
+        print("\n========== FLASK: LECTURERS TEACHING CLOUD COMPUTING ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Semantic Web?
+# ========================================================
+
+    if (
+    "who teaches semantic web" in question_lower
+    or "who teach semantic web" in question_lower
+    or "lecturers teaching semantic web" in question_lower
+    or "lecturers who teach semantic web" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_semantic_web()
+
+        print("\n========== FLASK: LECTURERS TEACHING SEMANTIC WEB ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Embedded Robotic System?
+# ========================================================
+
+    if (
+    "who teaches embedded robotic system" in question_lower
+    or "who teach embedded robotic system" in question_lower
+    or "lecturers teaching embedded robotic system" in question_lower
+    or "lecturers who teach embedded robotic system" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_embedded_robotic_system()
+
+        print("\n========== FLASK: LECTURERS TEACHING EMBEDDED ROBOTIC SYSTEM ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Deep Learning?
+# ========================================================
+
+    if (
+    "who teaches deep learning" in question_lower
+    or "who teach deep learning" in question_lower
+    or "lecturers teaching deep learning" in question_lower
+    or "lecturers who teach deep learning" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_deep_learning()
+
+        print("\n========== FLASK: LECTURERS TEACHING DEEP LEARNING ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Comprehensive Web Design?
+# ========================================================
+
+    if (
+    "who teaches comprehensive web design" in question_lower
+    or "who teach comprehensive web design" in question_lower
+    or "lecturers teaching comprehensive web design" in question_lower
+    or "lecturers who teach comprehensive web design" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_comprehensive_web_design()
+
+        print("\n========== FLASK: LECTURERS TEACHING COMPREHENSIVE WEB DESIGN ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Business System Infrastructure and Security?
+# ========================================================
+
+    if (
+    "who teaches business system infrastructure and security" in question_lower
+    or "who teach business system infrastructure and security" in question_lower
+    or "lecturers teaching business system infrastructure and security" in question_lower
+    or "lecturers who teach business system infrastructure and security" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_business_system_infrastructure_and_security()
+
+        print(
+        "\n========== FLASK: LECTURERS TEACHING "
+        "BUSINESS SYSTEM INFRASTRUCTURE AND SECURITY =========="
+    )
+
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches English?
+# ========================================================
+
+    if (
+    "who teaches english" in question_lower
+    or "who teach english" in question_lower
+    or "lecturers teaching english" in question_lower
+    or "lecturers who teach english" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_english()
+
+        print("\n========== FLASK: LECTURERS TEACHING ENGLISH ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Machine Learning?
+# ========================================================
+
+    if (
+    "who teaches machine learning" in question_lower
+    or "who teach machine learning" in question_lower
+    or "lecturers teaching machine learning" in question_lower
+    or "lecturers who teach machine learning" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_machine_learning()
+        print("\n========== FLASK: LECTURERS TEACHING MACHINE LEARNING ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+        return jsonify({
+        "answer": lecturers
+
+    })
+# ========================================================
+# Who teaches Advanced Information Theory?
+# ========================================================
+
+    if (
+    "who teaches advanced information theory" in question_lower
+    or "who teach advanced information theory" in question_lower
+    or "lecturers teaching advanced information theory" in question_lower
+    or "lecturers who teach advanced information theory" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_advanced_information_theory()
+
+        print("\n========== FLASK: LECTURERS TEACHING ADVANCED INFORMATION THEORY ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who teaches Business Analytics?
+# ========================================================
+
+    if (
+    "who teaches business analytics" in question_lower
+    or "who teach business analytics" in question_lower
+    or "lecturers teaching business analytics" in question_lower
+    or "lecturers who teach business analytics" in question_lower
+):
+
+        lecturers = get_lecturers_teaching_business_analytics()
+        print("\n========== FLASK: LECTURERS TEACHING BUSINESS ANALYTICS ==========")
+        print("Lecturers returned:", len(lecturers))
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# STUDENTS MAJORING IN A SPECIFIC MAJOR
+# ========================================================
+
+    if (
+        "which students are majoring in" in question_lower
+        or "which students major in" in question_lower
+        or "who is majoring in" in question_lower
+        or "who majors in" in question_lower
+    ):
+
+        match = re.search(
+        r"(?:which students are majoring in|which students major in|who is majoring in|who majors in)\s+(.+?)\??$",
+        question_lower
+    )
+
+        if match:
+
+            major_name = match.group(1).strip()
+
+        # Find the actual major name from the ontology
+            major_name = " ".join(
+            word.capitalize()
+            for word in major_name.split()
+        )
+
+            students = answer_students_majoring_in(major_name)
+
+            print("\n========== FLASK: STUDENTS MAJORING IN ==========")
+
+            print("Major:", major_name)
+
+            print("Students returned:", len(students))
+
+            print("Data:", students)
+
+            return jsonify({
+            "answer": students
+        })
+# ========================================================
+# List All Lecturers With Course
+# ========================================================
+
+    if (
+    "list all lecturers" in question_lower
+    or "show all lecturers" in question_lower
+    or "all lecturers" in question_lower
+    or "list all lecture" in question_lower
+    or "show all lecture" in question_lower
+    or "list all lecturers with course" in question_lower
+    or "show all lecturers with course" in question_lower
+    or "all lecturers with course" in question_lower
+):
+
+        lecturers = get_all_lecturers()
+
+        print("\n========== FLASK: ALL LECTURERS WITH COURSE ==========")
+
+        print("Lecturers returned:", len(lecturers))
+
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
     # ========================================================
 # STUDENT COURSES
 # ========================================================
@@ -325,28 +601,51 @@ def ask():
         "answer": departments
     })
 
-
-        # ========================================================
-# List All Lecturers
+# ========================================================
+# Who teaches Analysis of Algorithms?
 # ========================================================
 
     if (
-    "list all lecturers" in question_lower
-    or "show all lecturers" in question_lower
-    or "all lecturers" in question_lower
-    or "list all lecture" in question_lower
-    or "show all lecture" in question_lower
-):
+        "who teaches analysis of algorithms" in question_lower
+        or "who teach analysis of algorithms" in question_lower
+        or "lecturers teaching analysis of algorithms" in question_lower
+        or "lecturers who teach analysis of algorithms" in question_lower
+    ):
 
-        lecturers = get_all_lecturers()
+        lecturers = get_lecturers_teaching_analysis_of_algorithms()
 
-        print("\n========== FLASK: ALL LECTURERS ==========")
+        print("\n========== FLASK: LECTURERS TEACHING ANALYSIS OF ALGORITHMS ==========")
         print("Lecturers returned:", len(lecturers))
         print("Data:", lecturers)
 
         return jsonify({
-        "answer": lecturers
-    })
+            "answer": lecturers
+        })
+
+
+# ========================================================
+# List All Lecturers
+# ========================================================
+
+#     if (
+#     "list all lecturers" in question_lower
+#     or "show all lecturers" in question_lower
+#     or "all lecturers" in question_lower
+#     or "list all lecture" in question_lower
+#     or "show all lecture" in question_lower
+# ):
+
+#         lecturers = get_all_lecturers()
+
+#         print("\n========== FLASK: ALL LECTURERS ==========")
+
+#         print("Lecturers returned:", len(lecturers))
+
+#         print("Data:", lecturers)
+
+#         return jsonify({
+#         "answer": lecturers
+#     })
 
     # ========================================================
     # Question not understood
