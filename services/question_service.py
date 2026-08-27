@@ -29,6 +29,7 @@ from services.sparql_queries import (
     lecturers_teaching_deep_learning,
     lecturers_teaching_comprehensive_web_design,
     lecturers_teaching_business_system_infrastructure_and_security,
+    course_code_by_name,
 )
 # ========================================================
 # Lecturers teaching Cloud Computing
@@ -106,6 +107,27 @@ def get_lecturers_teaching_deep_learning():
         })
 
     return lecturers
+
+# ========================================================
+# Get Course Code
+# ========================================================
+
+def get_course_code(course_name):
+
+    query = course_code_by_name(course_name)
+
+    data = execute_query(query)
+
+    courses = []
+
+    for binding in data["results"]["bindings"]:
+
+        courses.append({
+            "courseName": binding["courseName"]["value"],
+            "courseCode": binding["courseCode"]["value"]
+        })
+
+    return courses
 # ========================================================
 # Lecturers teaching Comprehensive Web Design
 # ========================================================
@@ -125,6 +147,29 @@ def get_lecturers_teaching_comprehensive_web_design():
         })
 
     return lecturers
+# ============================================================
+# Get Course Code by Course Name
+# ============================================================
+
+def answer_course_code(course_name):
+    query = course_code_by_name(course_name)
+    result = execute_query(query)
+
+    bindings = result.get("results", {}).get("bindings", [])
+
+    if not bindings:
+        return {
+            "courseName": course_name,
+            "courseCode": None,
+            "message": f"No course code found for {course_name}."
+        }
+
+    binding = bindings[0]
+
+    return {
+        "courseName": binding.get("courseName", {}).get("value", course_name),
+        "courseCode": binding.get("courseCode", {}).get("value", "")
+    }
 # ========================================================
 # Lecturers teaching Business System Infrastructure and Security
 # ========================================================

@@ -522,3 +522,27 @@ def lecturers_teaching_business_system_infrastructure_and_security():
     }
     ORDER BY ?lecturerName
     """
+# ========================================================
+# Course Code by Course Name
+# ========================================================
+
+def course_code_by_name(course_name):
+
+    return PREFIX + f"""
+    SELECT DISTINCT ?courseName ?courseCode
+
+    WHERE {{
+
+        ?course rdf:type unisemantic:Courses ;
+                unisemantic:hasName ?courseName ;
+                unisemantic:hasCourseCode ?courseCode .
+
+        FILTER(
+            LCASE(STR(?courseName))
+            = "{course_name.lower()}"
+        )
+
+    }}
+
+    ORDER BY ?courseName
+    """

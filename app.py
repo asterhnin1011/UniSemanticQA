@@ -31,6 +31,7 @@ from services.question_service import (
     get_lecturers_teaching_deep_learning,
     get_lecturers_teaching_comprehensive_web_design,
     get_lecturers_teaching_business_system_infrastructure_and_security,
+    get_course_code,
 )
 
 app = Flask(__name__)
@@ -134,6 +135,197 @@ def ask():
         return jsonify({
         "answer": lecturers
     })
+# ========================================================
+# What is the course code of English?
+# ========================================================
+
+    if (
+    "what is the course code of english" in question_lower
+    or "course code of english" in question_lower
+    or "course code for english" in question_lower
+):
+
+        courses = get_course_code("English")
+        print("\n========== FLASK: COURSE CODE OF ENGLISH ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        if courses:
+            return jsonify({
+            "answer": courses
+        })
+# ========================================================
+# What is the course code of Advanced Information Theory?
+# ========================================================
+
+    if (
+    "what is the course code of advanced information theory" in question_lower
+    or "course code of advanced information theory" in question_lower
+    or "course code for advanced information theory" in question_lower
+):
+
+        courses = get_course_code("Advanced Information Theory")
+        print("\n========== FLASK: COURSE CODE OF ADVANCED INFORMATION THEORY ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        if courses:
+
+            return jsonify({
+            "answer": courses
+        })
+# ========================================================
+# What is the course code of Analysis of Algorithms?
+# ========================================================
+
+    if (
+    "what is the course code of analysis of algorithms" in question_lower
+    or "course code of analysis of algorithms" in question_lower
+    or "course code for analysis of algorithms" in question_lower
+):
+
+        courses = get_course_code("Analysis of Algorithms")
+        print("\n========== FLASK: COURSE CODE OF ANALYSIS OF ALGORITHMS ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        if courses:
+            return jsonify({
+            "answer": courses
+        })
+
+# ========================================================
+# What is the course code of Business Analytics?
+# ========================================================
+
+    if (
+    "what is the course code of business analytics" in question_lower
+    or "course code of business analytics" in question_lower
+    or "course code for business analytics" in question_lower
+):
+
+        courses = get_course_code("Business Analytics")
+        print("\n========== FLASK: COURSE CODE OF BUSINESS ANALYTICS ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        if courses:
+            return jsonify({
+            "answer": courses
+        })
+# ========================================================
+# What is the course code of Business System Infrastructure And Security?
+# ========================================================
+
+    if (
+    "what is the course code of business system infrastructure and security" in question_lower
+    or "course code of business system infrastructure and security" in question_lower
+    or "course code for business system infrastructure and security" in question_lower
+):
+
+        courses = get_course_code("Business System Infrastructure And Security")
+        print("\n========== FLASK: COURSE CODE OF business system infrastructure and security ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        if courses:
+            return jsonify({
+            "answer": courses
+        })
+
+# ========================================================
+# What is the course code of Cloud Computing?
+# ========================================================
+
+    if (
+    "what is the course code of cloud computing" in question_lower
+    or "course code of cloud computing" in question_lower
+    or "course code for cloud computing" in question_lower
+):
+        courses = get_course_code("Cloud Computing")
+        print("\n========== FLASK: COURSE CODE OF CLOUD COMPUTING ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        return jsonify({
+        "answer": courses
+    })
+# ========================================================
+# What is the course code of Comprehensive Web Application Design ?
+# ========================================================
+
+    if (
+    "what is the course code of comprehensive web application design" in question_lower
+    or "course code of comprehensive web application design" in question_lower
+    or "course code for comprehensive web application design" in question_lower
+):
+        courses = get_course_code("Comprehensive Web Application Design ")
+        print("\n========== FLASK: COURSE CODE OF Comprehensive Web Application Design ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        return jsonify({
+        "answer": courses
+    })
+# ========================================================
+# What is the course code of Embedded Robotic System?
+# ========================================================
+
+    if (
+    "what is the course code of embedded robotic system" in question_lower
+    or "course code of embedded robotic system" in question_lower
+    or "course code for embedded robotic system" in question_lower
+):
+        courses = get_course_code("Embedded Robotic System")
+        print("\n========== FLASK: COURSE CODE OF Embedded Robotic System ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        return jsonify({
+        "answer": courses
+    })
+# ========================================================
+# What is the course code of Machine Learning?
+# ========================================================
+
+    if (
+    "what is the course code of machine learning" in question_lower
+    or "course code of machine learning" in question_lower
+    or "course code for machine learning" in question_lower
+):
+
+        courses = get_course_code("Machine Learning")
+        print("\n========== FLASK: COURSE CODE OF MACHINE LEARNING ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        return jsonify({
+        "answer": courses
+    })
+# ========================================================
+# What is the course code of Resilient Dataset and Deep Learning?
+# ========================================================
+
+    if (
+    "what is the course code of resilient dataset and deep learning" in question_lower
+    or "course code of resilient dataset and deep learning" in question_lower
+    or "course code for resilient dataset and deep learning" in question_lower
+):
+
+        courses = get_course_code("Resilient Dataset and Deep Learning")
+        print("\n========== FLASK: COURSE CODE OF RESILIENT DATASET AND DEEP LEARNING ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        return jsonify({
+        "answer": courses
+    })
+# ========================================================
+# What is the course code of Semantic Web?
+# ========================================================
+
+    if (
+    "what is the course code of semantic web" in question_lower
+    or "course code of semantic web" in question_lower
+    or "course code for semantic web" in question_lower
+):
+        courses = get_course_code("Semantic Web")
+        print("\n========== FLASK: COURSE CODE OF SEMANTIC WEB ==========")
+        print("Courses returned:", len(courses))
+        print("Data:", courses)
+        return jsonify({
+        "answer": courses
+    })  
 # ========================================================
 # Who teaches Deep Learning?
 # ========================================================
