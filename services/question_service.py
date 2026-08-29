@@ -30,6 +30,11 @@ from services.sparql_queries import (
     lecturers_teaching_comprehensive_web_design,
     lecturers_teaching_business_system_infrastructure_and_security,
     course_code_by_name,
+    department_of_lecturer,
+    lecturers_working_in_faculty,
+    students_taught_by_lecturer,
+    students_majoring_in_ke_and_enrolled_in_embedded_robotic,
+    students_majoring_in_and_enrolled_in,
 )
 # ========================================================
 # Lecturers teaching Cloud Computing
@@ -51,6 +56,34 @@ def get_lecturers_teaching_cloud_computing():
 
     return lecturers
 # ========================================================
+# Students majoring in a specific major
+# and enrolled in a specific course
+# ========================================================
+
+def get_students_majoring_in_and_enrolled_in(major_name, course_name):
+
+    query = students_majoring_in_and_enrolled_in(
+        major_name,
+        course_name
+    )
+
+    result = execute_query(query)
+
+    bindings = result.get("results", {}).get("bindings", [])
+
+    students = []
+
+    for binding in bindings:
+
+        student_name = binding.get(
+            "studentName", {}
+        ).get("value", "")
+
+        if student_name:
+            students.append(student_name)
+
+    return students
+# ========================================================
 # Lecturers teaching Semantic Web
 # ========================================================
 
@@ -69,6 +102,30 @@ def get_lecturers_teaching_semantic_web():
         })
 
     return lecturers
+# ========================================================
+# Students majoring in KE and enrolled in Embedded Robotic System
+# ========================================================
+
+def get_students_majoring_in_ke_and_enrolled_in_embedded_robotic():
+
+    query = students_majoring_in_ke_and_enrolled_in_embedded_robotic()
+
+    result = execute_query(query)
+
+    bindings = result.get("results", {}).get("bindings", [])
+
+    students = []
+
+    for binding in bindings:
+
+        student_name = binding.get(
+            "studentName", {}
+        ).get("value", "")
+
+        if student_name:
+            students.append(student_name)
+
+    return students
 # ========================================================
 # Lecturers teaching Embedded Robotic System
 # ========================================================
@@ -189,6 +246,81 @@ def get_lecturers_teaching_business_system_infrastructure_and_security():
         })
 
     return lecturers
+    
+
+# ========================================================
+# Department by Lecturer Name
+# ========================================================
+
+def get_department_of_lecturer(lecturer_name):
+
+    query = department_of_lecturer(lecturer_name)
+
+    result = execute_query(query)
+
+    bindings = result.get("results", {}).get("bindings", [])
+
+    departments = []
+
+    for binding in bindings:
+
+        department_name = binding.get(
+            "departmentName", {}
+        ).get("value", "")
+
+        if department_name:
+            departments.append(department_name)
+
+    return departments
+
+# ========================================================
+# Who are the lecturers working in a specific faculty?
+# ========================================================
+
+def get_lecturers_working_in_faculty(faculty_name):
+
+    query = lecturers_working_in_faculty(faculty_name)
+
+    result = execute_query(query)
+
+    bindings = result.get("results", {}).get("bindings", [])
+
+    lecturers = []
+
+    for binding in bindings:
+
+        lecturer_name = binding.get(
+            "lecturerName", {}
+        ).get("value", "")
+
+        if lecturer_name:
+            lecturers.append(lecturer_name)
+
+    return lecturers
+# ========================================================
+# Which students are taught by a specific lecturer?
+# ========================================================
+
+def get_students_taught_by_lecturer(lecturer_name):
+
+    query = students_taught_by_lecturer(lecturer_name)
+
+    result = execute_query(query)
+
+    bindings = result.get("results", {}).get("bindings", [])
+
+    students = []
+
+    for binding in bindings:
+
+        student_name = binding.get(
+            "studentName", {}
+        ).get("value", "")
+
+        if student_name:
+            students.append(student_name)
+
+    return students
 
 # ========================================================
 # Lecturers teaching English

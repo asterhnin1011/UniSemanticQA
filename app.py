@@ -32,7 +32,13 @@ from services.question_service import (
     get_lecturers_teaching_comprehensive_web_design,
     get_lecturers_teaching_business_system_infrastructure_and_security,
     get_course_code,
+    get_department_of_lecturer,
+    get_lecturers_working_in_faculty,
+    get_students_taught_by_lecturer,
+    get_students_majoring_in_ke_and_enrolled_in_embedded_robotic,
+    get_students_majoring_in_and_enrolled_in,
 )
+
 
 app = Flask(__name__)
 
@@ -327,6 +333,453 @@ def ask():
         "answer": courses
     })  
 # ========================================================
+# Which department does Daw Mya Thandar belong to?
+# ========================================================
+
+    if (
+    "which department does daw mya thandar belong to" in question_lower
+    or "department does daw mya thandar belong to" in question_lower
+    or "daw mya thandar belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Daw Mya Thandar")
+
+        print("\n========== FLASK: DEPARTMENT OF DAW MYA THANDAR ==========")
+
+        print("Departments returned:", len(departments))
+
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Daw Aye Aye Maw belong to?
+# ========================================================
+
+    if (
+    "which department does daw aye aye maw belong to" in question_lower
+    or "department does daw aye aye maw belong to" in question_lower
+    or "daw aye aye maw belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Daw Aye Aye Maw")
+
+        print("\n========== FLASK: DEPARTMENT OF DAW AYE AYE MAW ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Amy Tun belong to?
+# ========================================================
+
+    if (
+    "which department does dr amy tun belong to" in question_lower
+    or "department does dr amy tun belong to" in question_lower
+    or "dr amy tun belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Amy Tun")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. AMY TUN ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Hsu Myat Mo belong to?
+# ========================================================
+
+    if(
+    "which department does dr hsu myat mo belong to" in question_lower
+    or "department does dr hsu myat mo belong to" in question_lower
+    or "dr hsu myat mo belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Hsu Myat Mo")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. HSU MYAT MO ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    }) 
+# ========================================================
+# Which department does Dr. Khaing Khaing Wai belong to?
+# ========================================================
+
+    if (
+    "which department does dr khaing khaing wai belong to" in question_lower
+    or "department does dr khaing khaing wai belong to" in question_lower
+    or "dr khaing khaing wai belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Khaing Khaing Wai")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. KHAING KHAING WAI ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Kyaw Kyaw Khaing belong to?
+# ========================================================
+
+    if (
+    "which department does dr kyaw kyaw khaing belong to" in question_lower
+    or "department does dr kyaw kyaw khaing belong to" in question_lower
+    or "dr kyaw kyaw khaing belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Kyaw Kyaw Khaing")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. KYAW KYAW KHAING ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    }) 
+# ========================================================
+# Which department does Dr. Moe Moe Hlaing belong to?
+# ========================================================
+
+    if (
+    "which department does dr moe moe hlaing belong to" in question_lower
+    or "department does dr moe moe hlaing belong to" in question_lower
+    or "dr moe moe hlaing belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Moe Moe Hlaing")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. MOE MOE HLAING ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Tin Tin Htar belong to?
+# ========================================================
+
+    if (
+    "which department does dr tin tin htar belong to" in question_lower
+    or "department does dr tin tin htar belong to" in question_lower
+    or "dr tin tin htar belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Tin Tin Htar")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. TIN TIN HTAR ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Tin Zar Thaw belong to?
+# ========================================================
+
+    if (
+    "which department does dr tin zar thaw belong to" in question_lower
+    or "department does dr tin zar thaw belong to" in question_lower
+    or "dr tin zar thaw belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Tin Zar Thaw")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. TIN ZAR THAW ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Win Lelt Lelt Phyu belong to?
+# ========================================================
+
+    if (
+    "which department does dr win lelt lelt phyu belong to" in question_lower
+    or "department does dr win lelt lelt phyu belong to" in question_lower
+    or "dr win lelt lelt phyu belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Win Lelt Lelt Phyu")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. WIN LELT LELT PHYU ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+# ========================================================
+# Which department does Dr. Yu Yu Than belong to?
+# ========================================================
+
+    if (
+    "which department does dr yu yu than belong to" in question_lower
+    or "department does dr yu yu than belong to" in question_lower
+    or "dr yu yu than belong to which department" in question_lower
+):
+
+        departments = get_department_of_lecturer("Dr. Yu Yu Than")
+
+        print("\n========== FLASK: DEPARTMENT OF DR. YU YU THAN ==========")
+        print("Departments returned:", len(departments))
+        print("Data:", departments)
+
+        return jsonify({
+        "answer": departments
+    })
+    # ========================================================
+    # Which students are majoring in KE and are currently
+    # enrolled in Analysis of Parallel Algorithms?
+    # ========================================================
+
+    if (
+        "which students are majoring in ke and are currently enrolled in analysis of parallel algorithms" in question_lower
+        or "which students are majoring in ke and enrolled in analysis of parallel algorithms" in question_lower
+    ):
+
+        students = get_students_majoring_in_and_enrolled_in(
+            "Knowledge Engineering",
+            "Analysis of Algorithms"
+        )
+
+        print(
+            "\n========== FLASK: KE STUDENTS ENROLLED IN ANALYSIS OF ALGORITHMS =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+    # ========================================================
+    # Which students are majoring in SE and are currently
+    # enrolled in Analysis of Parallel Algorithms?
+    # ========================================================
+
+    if (
+        "which students are majoring in se and are currently enrolled in analysis of parallel algorithms" in question_lower
+        or "which students are majoring in se and enrolled in analysis of parallel algorithms" in question_lower
+    ):
+
+        students = get_students_majoring_in_and_enrolled_in(
+            "Software Engineering",
+            "Analysis of Algorithms"
+        )
+
+        print(
+            "\n========== FLASK: SE STUDENTS ENROLLED IN ANALYSIS OF ALGORITHMS =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+    # ========================================================
+    # Which students are majoring in SE and are currently
+    # enrolled in Comprehensive Web Application Design?
+    # ========================================================
+
+    if (
+        "which students are majoring in se and are currently enrolled in comprehensive web application design" in question_lower
+        or "which students are majoring in se and enrolled in comprehensive web application design" in question_lower
+    ):
+
+        students = get_students_majoring_in_and_enrolled_in(
+            "Software Engineering",
+            "Comprehensive Web Application Design"
+        )
+
+        print(
+            "\n========== FLASK: SE STUDENTS ENROLLED IN WEB DESIGN =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+    # ========================================================
+    # Which students are majoring in BIS and are currently
+    # enrolled in Analysis of Parallel Algorithms?
+    # ========================================================
+
+    if (
+        "which students are majoring in bis and are currently enrolled in analysis of parallel algorithms" in question_lower
+        or "which students are majoring in bis and enrolled in analysis of parallel algorithms" in question_lower
+    ):
+
+        students = get_students_majoring_in_and_enrolled_in(
+            "Business Information Systems",
+            "Analysis of Algorithms"
+        )
+
+        print(
+            "\n========== FLASK: BIS STUDENTS ENROLLED IN ANALYSIS OF ALGORITHMS =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+    # ========================================================
+    # Which students are majoring in BIS and are currently
+    # enrolled in Comprehensive Web Application Design?
+    # ========================================================
+
+    if (
+        "which students are majoring in bis and are currently enrolled in comprehensive web application design" in question_lower
+        or "which students are majoring in bis and enrolled in comprehensive web application design" in question_lower
+    ):
+
+        students = get_students_majoring_in_and_enrolled_in(
+            "Business Information Systems",
+            "Comprehensive Web Application Design"
+        )
+
+        print(
+            "\n========== FLASK: BIS STUDENTS ENROLLED IN WEB DESIGN =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+# ========================================================
+# Who are the lecturers working in the Faculty of Computer Science?
+# ========================================================
+
+    if (
+    "who are the lecturers working in the faculty of computer science" in question_lower
+    or "who are the lecturers working in faculty of computer science" in question_lower
+    or "lecturers working in the faculty of computer science" in question_lower
+    or "lecturers in the faculty of computer science" in question_lower
+):
+
+        lecturers = get_lecturers_working_in_faculty(
+        "Faculty of Computer Science"
+    )
+
+        print(
+        "\n========== FLASK: LECTURERS WORKING IN FACULTY OF COMPUTER SCIENCE =========="
+    )
+
+        print("Lecturers returned:", len(lecturers))
+
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who are the lecturers working in the Faculty of Information Science?
+# ========================================================
+
+    if (
+    "who are the lecturers working in the faculty of information science" in question_lower
+    or "who are the lecturers working in faculty of information science" in question_lower
+    or "lecturers working in the faculty of information science" in question_lower
+    or "lecturers in the faculty of information science" in question_lower
+):
+
+        lecturers = get_lecturers_working_in_faculty(
+        "Faculty of Information Science"
+    )
+
+        print(
+        "\n========== FLASK: LECTURERS WORKING IN FACULTY OF INFORMATION SCIENCE =========="
+    )
+
+        print("Lecturers returned:", len(lecturers))
+
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+
+
+# ========================================================
+# Who are the lecturers working in the Faculty of Computer Systems and Technologies?
+# ========================================================
+
+    if (
+    "who are the lecturers working in the faculty of computer systems and technologies" in question_lower
+    or "who are the lecturers working in faculty of computer systems and technologies" in question_lower
+    or "lecturers working in the faculty of computer systems and technologies" in question_lower
+    or "lecturers in the faculty of computer systems and technologies" in question_lower
+):
+
+        lecturers = get_lecturers_working_in_faculty(
+        "Faculty of Computer Systems and Technologies"
+    )
+
+        print(
+        "\n========== FLASK: LECTURERS WORKING IN FACULTY OF COMPUTER SYSTEMS AND TECHNOLOGIES =========="
+    )
+
+        print("Lecturers returned:", len(lecturers))
+
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
+# Who are the lecturers working in the Department of English?
+# ========================================================
+
+    if (
+    "who are the lecturers working in the department of english" in question_lower
+    or "who are the lecturers working in department of english" in question_lower
+    or "lecturers working in the department of english" in question_lower
+    or "lecturers in the department of english" in question_lower
+):
+
+        lecturers = get_lecturers_working_in_faculty(
+        "Department of English"
+    )
+
+        print(
+        "\n========== FLASK: LECTURERS WORKING IN DEPARTMENT OF ENGLISH =========="
+    )
+
+        print("Lecturers returned:", len(lecturers))
+
+        print("Data:", lecturers)
+
+        return jsonify({
+        "answer": lecturers
+    })
+# ========================================================
 # Who teaches Deep Learning?
 # ========================================================
 
@@ -347,127 +800,434 @@ def ask():
         "answer": lecturers
     })
 # ========================================================
-# Who teaches Comprehensive Web Design?
+# Which students are taught by Daw Mya Thandar?
 # ========================================================
 
     if (
-    "who teaches comprehensive web design" in question_lower
-    or "who teach comprehensive web design" in question_lower
-    or "lecturers teaching comprehensive web design" in question_lower
-    or "lecturers who teach comprehensive web design" in question_lower
+    "which students are taught by daw mya thandar" in question_lower
+    or "students taught by daw mya thandar" in question_lower
 ):
 
-        lecturers = get_lecturers_teaching_comprehensive_web_design()
-
-        print("\n========== FLASK: LECTURERS TEACHING COMPREHENSIVE WEB DESIGN ==========")
-        print("Lecturers returned:", len(lecturers))
-        print("Data:", lecturers)
-
-        return jsonify({
-        "answer": lecturers
-    })
-# ========================================================
-# Who teaches Business System Infrastructure and Security?
-# ========================================================
-
-    if (
-    "who teaches business system infrastructure and security" in question_lower
-    or "who teach business system infrastructure and security" in question_lower
-    or "lecturers teaching business system infrastructure and security" in question_lower
-    or "lecturers who teach business system infrastructure and security" in question_lower
-):
-
-        lecturers = get_lecturers_teaching_business_system_infrastructure_and_security()
-
-        print(
-        "\n========== FLASK: LECTURERS TEACHING "
-        "BUSINESS SYSTEM INFRASTRUCTURE AND SECURITY =========="
+        students = get_students_taught_by_lecturer(
+        "Daw Mya Thandar"
     )
 
-        print("Lecturers returned:", len(lecturers))
-        print("Data:", lecturers)
+        print(
+        "\n========== FLASK: STUDENTS TAUGHT BY DAW MYA THANDAR =========="
+    )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
 
         return jsonify({
-        "answer": lecturers
-    })
+            "answer": students
+        })
+
+
 # ========================================================
-# Who teaches English?
+# Which students are taught by Dr. Moe Moe Hlaing?
 # ========================================================
 
     if (
-    "who teaches english" in question_lower
-    or "who teach english" in question_lower
-    or "lecturers teaching english" in question_lower
-    or "lecturers who teach english" in question_lower
-):
+        "which students are taught by dr. moe moe hlaing" in question_lower
+        or "students taught by dr. moe moe hlaing" in question_lower
+    ):
 
-        lecturers = get_lecturers_teaching_english()
+        students = get_students_taught_by_lecturer(
+            "Dr. Moe Moe Hlaing"
+        )
 
-        print("\n========== FLASK: LECTURERS TEACHING ENGLISH ==========")
-        print("Lecturers returned:", len(lecturers))
-        print("Data:", lecturers)
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. MOE MOE HLAING =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
 
         return jsonify({
-        "answer": lecturers
-    })
+            "answer": students
+        })
+
+
 # ========================================================
-# Who teaches Machine Learning?
+# Which students are taught by Dr. Kyaw Kyaw Khaing?
 # ========================================================
 
     if (
-    "who teaches machine learning" in question_lower
-    or "who teach machine learning" in question_lower
-    or "lecturers teaching machine learning" in question_lower
-    or "lecturers who teach machine learning" in question_lower
-):
+        "which students are taught by dr. kyaw kyaw khaing" in question_lower
+        or "students taught by dr. kyaw kyaw khaing" in question_lower
+    ):
 
-        lecturers = get_lecturers_teaching_machine_learning()
-        print("\n========== FLASK: LECTURERS TEACHING MACHINE LEARNING ==========")
-        print("Lecturers returned:", len(lecturers))
-        print("Data:", lecturers)
+        students = get_students_taught_by_lecturer(
+            "Dr. Kyaw Kyaw Khaing"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. KYAW KYAW KHAING =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
         return jsonify({
-        "answer": lecturers
+            "answer": students
+        })
 
-    })
-# ========================================================
-# Who teaches Advanced Information Theory?
-# ========================================================
+
+    # ========================================================
+    # Which students are taught by Dr. Win Lelt Lelt Phyu?
+    # ========================================================
 
     if (
-    "who teaches advanced information theory" in question_lower
-    or "who teach advanced information theory" in question_lower
-    or "lecturers teaching advanced information theory" in question_lower
-    or "lecturers who teach advanced information theory" in question_lower
-):
+        "which students are taught by dr. win lelt lelt phyu" in question_lower
+        or "students taught by dr. win lelt lelt phyu" in question_lower
+    ):
 
-        lecturers = get_lecturers_teaching_advanced_information_theory()
+        students = get_students_taught_by_lecturer(
+            "Dr. Win Lelt Lelt Phyu"
+        )
 
-        print("\n========== FLASK: LECTURERS TEACHING ADVANCED INFORMATION THEORY ==========")
-        print("Lecturers returned:", len(lecturers))
-        print("Data:", lecturers)
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. WIN LELT LELT PHYU =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
 
         return jsonify({
-        "answer": lecturers
-    })
-# ========================================================
-# Who teaches Business Analytics?
-# ========================================================
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Dr. Tin Zar Thaw?
+    # ========================================================
 
     if (
-    "who teaches business analytics" in question_lower
-    or "who teach business analytics" in question_lower
-    or "lecturers teaching business analytics" in question_lower
-    or "lecturers who teach business analytics" in question_lower
-):
+        "which students are taught by dr. tin zar thaw" in question_lower
+        or "students taught by dr. tin zar thaw" in question_lower
+    ):
 
-        lecturers = get_lecturers_teaching_business_analytics()
-        print("\n========== FLASK: LECTURERS TEACHING BUSINESS ANALYTICS ==========")
-        print("Lecturers returned:", len(lecturers))
-        print("Data:", lecturers)
+        students = get_students_taught_by_lecturer(
+            "Dr. Tin Zar Thaw"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. TIN ZAR THAW =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
 
         return jsonify({
-        "answer": lecturers
-    })
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Daw Aye Aye Maw?
+    # ========================================================
+
+    if (
+        "which students are taught by daw aye aye maw" in question_lower
+        or "students taught by daw aye aye maw" in question_lower
+    ):
+
+        students = get_students_taught_by_lecturer(
+            "Daw Aye Aye Maw"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DAW AYE AYE MAW =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Dr. Amy Tun?
+    # ========================================================
+
+    if (
+        "which students are taught by dr. amy tun" in question_lower
+        or "students taught by dr. amy tun" in question_lower
+    ):
+
+        students = get_students_taught_by_lecturer(
+            "Dr. Amy Tun"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. AMY TUN =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Dr. Hsu Myat Mo?
+    # ========================================================
+
+    if (
+        "which students are taught by dr. hsu myat mo" in question_lower
+        or "students taught by dr. hsu myat mo" in question_lower
+    ):
+
+        students = get_students_taught_by_lecturer(
+            "Dr. Hsu Myat Mo"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. HSU MYAT MO =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Dr. Tin Tin Htar?
+    # ========================================================
+
+    if (
+        "which students are taught by dr. tin tin htar" in question_lower
+        or "students taught by dr. tin tin htar" in question_lower
+    ):
+
+        students = get_students_taught_by_lecturer(
+            "Dr. Tin Tin Htar"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. TIN TIN HTAR =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Dr. Yu Yu Than?
+    # ========================================================
+
+    if (
+        "which students are taught by dr. yu yu than" in question_lower
+        or "students taught by dr. yu yu than" in question_lower
+    ):
+
+        students = get_students_taught_by_lecturer(
+            "Dr. Yu Yu Than"
+        )
+
+        print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. YU YU THAN =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+
+
+    # ========================================================
+    # Which students are taught by Dr. Khaing Khaing Wai?
+    # ========================================================
+
+        if (
+        "which students are taught by dr. khaing khaing wai" in question_lower
+        or "students taught by dr. khaing khaing wai" in question_lower
+    ):
+
+            students = get_students_taught_by_lecturer(
+            "Dr. Khaing Khaing Wai"
+        )
+
+            print(
+            "\n========== FLASK: STUDENTS TAUGHT BY DR. KHAING KHAING WAI =========="
+        )
+
+            print("Students returned:", len(students))
+
+            print("Data:", students)
+
+            return jsonify({
+            "answer": students
+        })
+    # ========================================================
+    # Which students are majoring in KE and are currently enrolled in Embedded Robotic System?
+    # ========================================================
+
+    if (
+        "which students are majoring in ke and are currently enrolled in embedded robotic system" in question_lower
+        or "which students are majoring in ke and enrolled in embedded robotic system" in question_lower
+        or "students majoring in ke and enrolled in embedded robotic system" in question_lower
+    ):
+
+        students = get_students_majoring_in_ke_and_enrolled_in_embedded_robotic()
+
+        print(
+            "\n========== FLASK: KE STUDENTS ENROLLED IN EMBEDDED ROBOTIC SYSTEM =========="
+        )
+
+        print("Students returned:", len(students))
+
+        print("Data:", students)
+
+        return jsonify({
+            "answer": students
+        })
+    # ========================================================
+    # Who teaches Comprehensive Web Design?
+    # ========================================================
+
+        if (
+        "who teaches comprehensive web design" in question_lower
+        or "who teach comprehensive web design" in question_lower
+        or "lecturers teaching comprehensive web design" in question_lower
+        or "lecturers who teach comprehensive web design" in question_lower
+    ):
+
+            lecturers = get_lecturers_teaching_comprehensive_web_design()
+
+            print("\n========== FLASK: LECTURERS TEACHING COMPREHENSIVE WEB DESIGN ==========")
+            print("Lecturers returned:", len(lecturers))
+            print("Data:", lecturers)
+
+            return jsonify({
+            "answer": lecturers
+        })
+    # ========================================================
+    # Who teaches Business System Infrastructure and Security?
+    # ========================================================
+
+        if (
+        "who teaches business system infrastructure and security" in question_lower
+        or "who teach business system infrastructure and security" in question_lower
+        or "lecturers teaching business system infrastructure and security" in question_lower
+        or "lecturers who teach business system infrastructure and security" in question_lower
+    ):
+
+            lecturers = get_lecturers_teaching_business_system_infrastructure_and_security()
+
+            print(
+            "\n========== FLASK: LECTURERS TEACHING "
+            "BUSINESS SYSTEM INFRASTRUCTURE AND SECURITY =========="
+        )
+
+            print("Lecturers returned:", len(lecturers))
+            print("Data:", lecturers)
+
+            return jsonify({
+            "answer": lecturers
+        })
+    # ========================================================
+    # Who teaches English?
+    # ========================================================
+
+        if (
+        "who teaches english" in question_lower
+        or "who teach english" in question_lower
+        or "lecturers teaching english" in question_lower
+        or "lecturers who teach english" in question_lower
+    ):
+
+            lecturers = get_lecturers_teaching_english()
+
+            print("\n========== FLASK: LECTURERS TEACHING ENGLISH ==========")
+            print("Lecturers returned:", len(lecturers))
+            print("Data:", lecturers)
+
+            return jsonify({
+            "answer": lecturers
+        })
+    # ========================================================
+    # Who teaches Machine Learning?
+    # ========================================================
+
+        if (
+        "who teaches machine learning" in question_lower
+        or "who teach machine learning" in question_lower
+        or "lecturers teaching machine learning" in question_lower
+        or "lecturers who teach machine learning" in question_lower
+    ):
+
+            lecturers = get_lecturers_teaching_machine_learning()
+            print("\n========== FLASK: LECTURERS TEACHING MACHINE LEARNING ==========")
+            print("Lecturers returned:", len(lecturers))
+            print("Data:", lecturers)
+            return jsonify({
+            "answer": lecturers
+
+        })
+    # ========================================================
+    # Who teaches Advanced Information Theory?
+    # ========================================================
+
+        if (
+        "who teaches advanced information theory" in question_lower
+        or "who teach advanced information theory" in question_lower
+        or "lecturers teaching advanced information theory" in question_lower
+        or "lecturers who teach advanced information theory" in question_lower
+    ):
+
+            lecturers = get_lecturers_teaching_advanced_information_theory()
+
+            print("\n========== FLASK: LECTURERS TEACHING ADVANCED INFORMATION THEORY ==========")
+            print("Lecturers returned:", len(lecturers))
+            print("Data:", lecturers)
+
+            return jsonify({
+            "answer": lecturers
+        })
+    # ========================================================
+    # Who teaches Business Analytics?
+    # ========================================================
+
+        if (
+        "who teaches business analytics" in question_lower
+        or "who teach business analytics" in question_lower
+        or "lecturers teaching business analytics" in question_lower
+        or "lecturers who teach business analytics" in question_lower
+    ):
+
+            lecturers = get_lecturers_teaching_business_analytics()
+            print("\n========== FLASK: LECTURERS TEACHING BUSINESS ANALYTICS ==========")
+            print("Lecturers returned:", len(lecturers))
+            print("Data:", lecturers)
+
+            return jsonify({
+            "answer": lecturers
+        })
 # ========================================================
 # STUDENTS MAJORING IN A SPECIFIC MAJOR
 # ========================================================
@@ -813,31 +1573,6 @@ def ask():
         return jsonify({
             "answer": lecturers
         })
-
-
-# ========================================================
-# List All Lecturers
-# ========================================================
-
-#     if (
-#     "list all lecturers" in question_lower
-#     or "show all lecturers" in question_lower
-#     or "all lecturers" in question_lower
-#     or "list all lecture" in question_lower
-#     or "show all lecture" in question_lower
-# ):
-
-#         lecturers = get_all_lecturers()
-
-#         print("\n========== FLASK: ALL LECTURERS ==========")
-
-#         print("Lecturers returned:", len(lecturers))
-
-#         print("Data:", lecturers)
-
-#         return jsonify({
-#         "answer": lecturers
-#     })
 
     # ========================================================
     # Question not understood

@@ -2,6 +2,9 @@
 # services/sparql_queries.py
 # ============================================================
 
+from ast import Return
+
+
 PREFIX = """
 PREFIX unisemantic: <http://example.org/unisemantic#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -545,4 +548,156 @@ def course_code_by_name(course_name):
     }}
 
     ORDER BY ?courseName
+    """
+
+# ========================================================
+# Lecturers working in a specific faculty
+# ========================================================
+
+def lecturers_working_in_faculty(faculty_name):
+
+    return PREFIX + f"""
+    SELECT DISTINCT ?lecturerName ?departmentName ?facultyName
+
+    WHERE {{
+
+        ?lecturer unisemantic:hasName ?lecturerName ;
+                  unisemantic:isFromDept ?department .
+
+        ?department unisemantic:hasName ?departmentName .
+
+        BIND(?departmentName AS ?facultyName)
+
+        FILTER(
+            LCASE(STR(?facultyName))
+            = "{faculty_name.lower()}"
+        )
+
+    }}
+
+    ORDER BY ?lecturerName
+
+    """
+# ========================================================
+# Students taught by Lecturer Name
+# ========================================================
+
+def students_taught_by_lecturer(lecturer_name):
+
+    return PREFIX + f"""
+    SELECT DISTINCT ?studentName
+
+    WHERE {{
+
+        ?lecturer unisemantic:hasName ?lecturerName ;
+                  unisemantic:teaches ?course .
+
+        ?student unisemantic:enrolledIn ?course ;
+                 unisemantic:hasName ?studentName .
+
+        FILTER(
+            LCASE(STR(?lecturerName))
+            = "{lecturer_name.lower()}"
+        )
+
+    }}
+
+    ORDER BY ?studentName
+
+    """
+# ========================================================
+# Students majoring in KE and enrolled in Embedded Robotic System
+# ========================================================
+
+def students_majoring_in_ke_and_enrolled_in_embedded_robotic():
+
+    return PREFIX + """
+    SELECT DISTINCT ?studentName
+
+    WHERE {
+
+        ?student unisemantic:hasName ?studentName ;
+                 unisemantic:specificMajor ?major ;
+                 unisemantic:enrolledIn ?course .
+
+        ?major unisemantic:hasName ?majorName .
+
+        ?course unisemantic:hasName ?courseName .
+
+        FILTER(
+            LCASE(STR(?majorName))
+            = "knowledge engineering"
+        )
+
+        FILTER(
+            LCASE(STR(?courseName))
+            = "embedded robotic system"
+        )
+
+    }
+
+    ORDER BY ?studentName
+
+    """
+# ========================================================
+# Students majoring in a specific major
+# and enrolled in a specific course
+# ========================================================
+
+def students_majoring_in_and_enrolled_in(major_name, course_name):
+
+    return PREFIX + f"""
+    SELECT DISTINCT ?studentName
+
+    WHERE {{
+
+        ?student unisemantic:hasName ?studentName ;
+                 unisemantic:specificMajor ?major ;
+                 unisemantic:enrolledIn ?course .
+
+        ?major unisemantic:hasName ?majorName .
+
+        ?course unisemantic:hasName ?courseName .
+
+        FILTER(
+            LCASE(STR(?majorName))
+            = "{major_name.lower()}"
+        )
+
+        FILTER(
+            LCASE(STR(?courseName))
+            = "{course_name.lower()}"
+        )
+
+    }}
+
+    ORDER BY ?studentName
+
+    """
+# ========================================================
+# Department by Lecturer Name
+# ========================================================
+
+def department_of_lecturer(lecturer_name):
+
+    return PREFIX + f"""
+
+    SELECT DISTINCT ?lecturerName ?departmentName
+
+    WHERE {{
+
+        ?lecturer unisemantic:hasName ?lecturerName ;
+                  unisemantic:isFromDept ?department .
+
+        ?department unisemantic:hasName ?departmentName .
+
+        FILTER(
+            LCASE(STR(?lecturerName))
+            = "{lecturer_name.lower()}"
+        )
+
+    }}
+
+    ORDER BY ?departmentName
+
     """
