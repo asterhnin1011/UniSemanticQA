@@ -38,6 +38,29 @@ def all_students():
     ORDER BY ?studentID
     """
 # ============================================================
+# ALL MAJORS
+# ============================================================
+
+def all_majors():
+
+    return PREFIX + """
+
+    SELECT DISTINCT
+
+        ?majorName
+
+    WHERE {
+
+        ?major rdf:type unisemantic:Majors ;
+
+               unisemantic:hasName ?majorName .
+
+    }
+
+    ORDER BY ?majorName
+
+    """
+# ============================================================
 # ALL SUBJECTS / COURSES
 # ============================================================
 

@@ -37,6 +37,7 @@ from services.question_service import (
     get_students_taught_by_lecturer,
     get_students_majoring_in_ke_and_enrolled_in_embedded_robotic,
     get_students_majoring_in_and_enrolled_in,
+    get_all_majors,
 )
 
 
@@ -101,6 +102,33 @@ def ask():
         return jsonify({
         "answer": lecturers
     })
+# ========================================================
+# List All Majors
+# ========================================================
+
+    if (
+
+        "list all majors" in question_lower
+
+        or "show all majors" in question_lower
+
+        or "all majors" in question_lower
+
+    ):
+
+        majors = get_all_majors()
+
+        print("\n========== FLASK: ALL MAJORS ==========")
+
+        print("Majors returned:", len(majors))
+
+        print("Data:", majors)
+
+        return jsonify({
+
+            "answer": majors
+
+        })
 # ========================================================
 # Who teaches Semantic Web?
 # ========================================================
@@ -1063,7 +1091,7 @@ def ask():
     # Which students are taught by Dr. Khaing Khaing Wai?
     # ========================================================
 
-        if (
+    if(
         "which students are taught by dr. khaing khaing wai" in question_lower
         or "students taught by dr. khaing khaing wai" in question_lower
     ):
@@ -1110,7 +1138,7 @@ def ask():
     # Who teaches Comprehensive Web Design?
     # ========================================================
 
-        if (
+    if(
         "who teaches comprehensive web design" in question_lower
         or "who teach comprehensive web design" in question_lower
         or "lecturers teaching comprehensive web design" in question_lower
@@ -1130,7 +1158,7 @@ def ask():
     # Who teaches Business System Infrastructure and Security?
     # ========================================================
 
-        if (
+    if(
         "who teaches business system infrastructure and security" in question_lower
         or "who teach business system infrastructure and security" in question_lower
         or "lecturers teaching business system infrastructure and security" in question_lower
@@ -1154,7 +1182,7 @@ def ask():
     # Who teaches English?
     # ========================================================
 
-        if (
+    if(
         "who teaches english" in question_lower
         or "who teach english" in question_lower
         or "lecturers teaching english" in question_lower
@@ -1174,7 +1202,7 @@ def ask():
     # Who teaches Machine Learning?
     # ========================================================
 
-        if (
+    if(
         "who teaches machine learning" in question_lower
         or "who teach machine learning" in question_lower
         or "lecturers teaching machine learning" in question_lower
@@ -1193,7 +1221,7 @@ def ask():
     # Who teaches Advanced Information Theory?
     # ========================================================
 
-        if (
+    if(
         "who teaches advanced information theory" in question_lower
         or "who teach advanced information theory" in question_lower
         or "lecturers teaching advanced information theory" in question_lower
@@ -1213,7 +1241,7 @@ def ask():
     # Who teaches Business Analytics?
     # ========================================================
 
-        if (
+    if(
         "who teaches business analytics" in question_lower
         or "who teach business analytics" in question_lower
         or "lecturers teaching business analytics" in question_lower

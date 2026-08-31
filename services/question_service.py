@@ -35,6 +35,7 @@ from services.sparql_queries import (
     students_taught_by_lecturer,
     students_majoring_in_ke_and_enrolled_in_embedded_robotic,
     students_majoring_in_and_enrolled_in,
+    all_majors,
 )
 # ========================================================
 # Lecturers teaching Cloud Computing
@@ -593,6 +594,7 @@ def get_student_data(result):
 
     return students
 
+
 # ============================================================
 # ALL SUBJECTS
 # ============================================================
@@ -654,6 +656,67 @@ def get_all_subjects():
 
     return subjects
 
+# ============================================================
+# ALL MAJORS
+# ============================================================
+
+def get_all_majors():
+
+    query = all_majors()
+
+    print("\n========== ALL MAJORS ==========")
+
+    print("SPARQL QUERY:")
+
+    print(query)
+
+    result = execute_query(query)
+
+    print("RAW RESULT:")
+
+    print(result)
+
+    majors = []
+
+    bindings = (
+
+        result
+
+        .get("results", {})
+
+        .get("bindings", [])
+
+    )
+
+    for item in bindings:
+
+        major = {
+
+            "majorName": item.get(
+
+                "majorName",
+
+                {}
+
+            ).get(
+
+                "value",
+
+                "-"
+
+            )
+
+        }
+
+        majors.append(major)
+
+    print("Majors found:", len(majors))
+
+    print("Major data:")
+
+    print(majors)
+
+    return majors
 # ============================================================
 # ALL DEPARTMENTS
 # ============================================================
